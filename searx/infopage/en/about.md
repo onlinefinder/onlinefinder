@@ -43,10 +43,6 @@ queries with searches on other platforms without storing search data.  OnlineFin
 can be added to your browser's search bar; moreover, it can be set as the
 default search engine.
 
-The {{link('stats page', 'stats')}} contains some useful anonymous usage
-statistics about the engines used.
-
-
 [OnlineFinder sources]: {{GIT_URL}}
 [OnlineFinder docs]: {{get_setting('brand.docs_url')}}
 [searx]: https://github.com/searx/searx
