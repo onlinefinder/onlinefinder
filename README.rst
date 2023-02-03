@@ -3,8 +3,8 @@
 ----
 
 .. figure:: https://raw.githubusercontent.com/onlinefinder/onlinefinder/master/src/brand/onlinefinder.svg
-   :target: https://docs.searxng.org/
-   :alt: SearXNG
+   :target: https://docs.oninefinder.org/
+   :alt: OnlineFinder
    :width: 100%
    :align: center
 
@@ -12,114 +12,81 @@
 
 Privacy-respecting, hackable `metasearch engine`_
 
-If you are looking for running instances, ready to use, then visit searx.space_.
+If you are looking for running instances, ready to use, then visit onlinefinder.com.
 Otherwise jump to the user_, admin_ and developer_ handbooks you will find on
 our homepage_.
 
-|SearXNG install|
-|SearXNG homepage|
-|SearXNG wiki|
+|OnlineFinder install|
+|OnlineFinder homepage|
+|OnlineFinder wiki|
 |AGPL License|
 |Issues|
 |commits|
 |weblate|
-|SearXNG logo|
+|OnlineFinder logo|
 
 ----
 
 .. _searx.space: https://searx.space
-.. _user: https://docs.searxng.org/user
-.. _admin: https://docs.searxng.org/admin
-.. _developer: https://docs.searxng.org/dev
-.. _homepage: https://docs.searxng.org/
+.. _user: https://docs.oninefinder.org/user
+.. _admin: https://docs.oninefinder.org/admin
+.. _developer: https://docs.oninefinder.org/dev
+.. _homepage: https://docs.oninefinder.org/
 .. _metasearch engine: https://en.wikipedia.org/wiki/Metasearch_engine
 
-.. |SearXNG logo| image:: https://raw.githubusercontent.com/searxng/searxng/master/src/brand/onlinefinder-wordmark.svg
-   :target: https://docs.searxng.org/
+.. |OnlineFinder logo| image:: https://raw.githubusercontent.com/oninefinder/oninefinder/master/src/brand/onlinefinder-wordmark.svg
+   :target: https://docs.oninefinder.org/
    :width: 5%
 
-.. |SearXNG install| image:: https://img.shields.io/badge/-install-blue
-   :target: https://docs.searxng.org/admin/installation.html
+.. |OnlineFinder install| image:: https://img.shields.io/badge/-install-blue
+   :target: https://docs.oninefinder.org/admin/installation.html
 
-.. |SearXNG homepage| image:: https://img.shields.io/badge/-homepage-blue
-   :target: https://docs.searxng.org/
+.. |OnlineFinder homepage| image:: https://img.shields.io/badge/-homepage-blue
+   :target: https://docs.oninefinder.org/
 
-.. |SearXNG wiki| image:: https://img.shields.io/badge/-wiki-blue
-   :target: https://github.com/searxng/searxng/wiki
+.. |OnlineFinder wiki| image:: https://img.shields.io/badge/-wiki-blue
+   :target: https://github.com/oninefinder/oninefinder/wiki
 
 .. |AGPL License|  image:: https://img.shields.io/badge/license-AGPL-blue.svg
-   :target: https://github.com/searxng/searxng/blob/master/LICENSE
+   :target: https://github.com/oninefinder/oninefinder/blob/master/LICENSE
 
-.. |Issues| image:: https://img.shields.io/github/issues/searxng/searxng?color=yellow&label=issues
-   :target: https://github.com/searxng/searxng/issues
+.. |Issues| image:: https://img.shields.io/github/issues/oninefinder/oninefinder?color=yellow&label=issues
+   :target: https://github.com/oninefinder/oninefinder/issues
 
-.. |PR| image:: https://img.shields.io/github/issues-pr-raw/searxng/searxng?color=yellow&label=PR
-   :target: https://github.com/searxng/searxng/pulls
+.. |PR| image:: https://img.shields.io/github/issues-pr-raw/oninefinder/oninefinder?color=yellow&label=PR
+   :target: https://github.com/oninefinder/oninefinder/pulls
 
-.. |commits| image:: https://img.shields.io/github/commit-activity/y/searxng/searxng?color=yellow&label=commits
-   :target: https://github.com/searxng/searxng/commits/master
+.. |commits| image:: https://img.shields.io/github/commit-activity/y/oninefinder/oninefinder?color=yellow&label=commits
+   :target: https://github.com/oninefinder/oninefinder/commits/master
 
-.. |weblate| image:: https://translate.codeberg.org/widgets/searxng/-/searxng/svg-badge.svg
-   :target: https://translate.codeberg.org/projects/searxng/
+.. |weblate| image:: https://translate.codeberg.org/widgets/oninefinder/-/oninefinder/svg-badge.svg
+   :target: https://translate.codeberg.org/projects/oninefinder/
 
 
 Contact
 =======
 
-Come join us if you have questions or just want to chat about SearXNG.
+Come join us if you have questions or just want to chat about OnlineFinder.
 
 Matrix
-  `#searxng:matrix.org <https://matrix.to/#/#searxng:matrix.org>`_
+  `#oninefinder:matrix.org <https://matrix.to/#/#oninefinder:matrix.org>`_
 
 IRC
-  `#searxng on libera.chat <https://web.libera.chat/?channel=#searxng>`_
+  `#oninefinder on libera.chat <https://web.libera.chat/?channel=#oninefinder>`_
   which is bridged to Matrix.
 
 
 Differences to searx
 ====================
 
-SearXNG is a fork of `searx`_.  Here are some of the changes:
+OnlineFinder is a fork of SearXNG.  Here are some of the changes:
 
-.. _searx: https://github.com/searx/searx
-
-
-User experience
----------------
-
-- Huge update of the simple theme:
-
-  * usable on desktop, tablet and mobile
-  * light and dark versions (you can choose in the preferences)
-  * support right-to-left languages
-  * `see the screenshots <https://dev.searxng.org/screenshots.html>`_
-
-- the translations are up to date, you can contribute on `Weblate`_
-- the preferences page has been updated:
-
-  * you can see which engines are reliable or not
-  * engines are grouped inside each tab
-  * each engine has a description
-
-- thanks to the anonymous metrics, it is easier to report a bug of an engine and
-  thus engines get fixed more quickly
-
-  - if you don't want any metrics to be recorded, you can `disable them on the server
-    <https://docs.searxng.org/admin/engines/settings.html#general>`_
-
-- administrator can `block and/or replace the URLs in the search results
-  <https://github.com/searxng/searxng/blob/5c1c0817c3996c5670a545d05831d234d21e6217/searx/settings.yml#L191-L199>`_
 
 
 Setup
 -----
 
-- you don't need `Morty`_ to proxy the images even on a public instance
-- you don't need `Filtron`_ to block bots, we implemented the builtin `limiter`_
-- you get a well maintained `Docker image`_, now also built for ARM64 and ARM/v7 architectures
-- alternatively we have up to date installation scripts
-
-.. _Docker image: https://github.com/searxng/searxng-docker
+.. _Docker image: https://github.com/oninefinder/oninefinder-docker
 
 
 Contributing is easier
@@ -132,24 +99,24 @@ Contributing is easier
 - the dependencies are up to date
 
 .. _Morty: https://github.com/asciimoo/morty
-.. _Filtron: https://github.com/searxng/filtron
-.. _limiter: https://docs.searxng.org/src/searx.plugins.limiter.html
-.. _Weblate: https://translate.codeberg.org/projects/searxng/searxng/
-.. _Development Quickstart: https://docs.searxng.org/dev/quickstart.html
+.. _Filtron: https://github.com/oninefinder/filtron
+.. _limiter: https://docs.oninefinder.org/src/searx.plugins.limiter.html
+.. _Weblate: https://translate.codeberg.org/projects/oninefinder/oninefinder/
+.. _Development Quickstart: https://docs.oninefinder.org/dev/quickstart.html
 
 
 Translations
 ============
 
 We need translators, suggestions are welcome at
-https://translate.codeberg.org/projects/searxng/searxng/
+https://translate.codeberg.org/projects/oninefinder/oninefinder/
 
-.. figure:: https://translate.codeberg.org/widgets/searxng/-/multi-auto.svg
-   :target: https://translate.codeberg.org/projects/searxng/
+.. figure:: https://translate.codeberg.org/widgets/oninefinder/-/multi-auto.svg
+   :target: https://translate.codeberg.org/projects/oninefinder/
 
 
 Make a donation
 ===============
 
-You can support the SearXNG project by clicking on the donation page:
-https://docs.searxng.org/donate.html
+You can support the OnlineFinder project by clicking on the donation page:
+https://docs.oninefinder.org/donate.html
