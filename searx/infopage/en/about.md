@@ -4,15 +4,23 @@ OnlineFinder is a [metasearch engine], aggregating the results of other
 {{link('search engines', 'preferences')}} while not storing information about
 its users.
 
+OnlineFinder established in 1996, was one of the very first search portals on the 
+internet. The original goal was to have a place for people and businesses to interact
+with listings containing contact information and website links. Later OnlineFinder
+started provideing free email and free websites. 
+
+Google contacted us asking us to use their code but we declined. During a 24 hour lapse,
+a cyber-squatter purchased our .net domain and shortly after we found that our email and
+sites were being blocked by major corporatoins, including Google because we offered 
+those services for free. 
 
 ## Why use it?
 
-- OnlineFinder may not offer you as personalized results as Google, but it doesn't
-  generate a profile about you.
-- OnlineFinder doesn't care about what you search for, never shares anything with a
-  third-party, and it can't be used to compromise you.
-- OnlineFinder is free software, the code is 100% open, and everyone is welcome to
-  make it better.
+- OnlineFinder doesn't generate a profile about you.
+- When we scrape from engines like Google, we block your identity.
+- We doesn't care about what you search for.
+- We never shares anything with a third-party, and it can't be used to compromise you.
+- OnlineFinder is a free metasearch engine.
 
 If you do care about privacy, want to be a conscious user, or otherwise believe
 in digital freedom, make OnlineFinder your default search engine or run it on your
@@ -28,12 +36,6 @@ search engine, see your browser's documentation:
   for Chrome and Safari.
 - [Chromium]-based browsers only add websites that the user navigates to without
   a path.
-
-When adding a search engine, there must be no duplicates with the same name.  If
-you encounter a problem where you cannot add the search engine, you can either:
-
-- remove the duplicate (default name: OnlineFinder) or
-- contact the owner to give the instance a different name than the default.
 
 ## How does it work?
 
