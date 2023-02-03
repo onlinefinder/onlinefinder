@@ -14,11 +14,11 @@ general:
   enable_metrics: true
 
 brand:
-  new_issue_url: https://github.com/searxng/searxng/issues/new
+  new_issue_url: https://github.com/onlinefinder/onlinefinder/issues/new
   docs_url: https://docs.searxng.org/
-  public_instances: https://searx.space
-  wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/searxng/searxng/issues
+  public_instances: https://onlinefinder.com
+  wiki_url: https://github.com/onlinefinder/onlinefinder/wiki
+  issue_url: https://github.com/onlinefinder/onlinefinder/issues
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
@@ -26,12 +26,12 @@ search:
   # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "yandex",
   # "seznam", "startpage", "swisscows", "qwant", "wikipedia" - leave blank to turn it off
   # by default.
-  autocomplete: ""
+  autocomplete: "google"
   # minimun characters to type before autocompleter starts
   autocomplete_min: 4
   # Default search language - leave blank to detect from browser information or
   # use codes from 'languages.py'
-  default_lang: ""
+  default_lang: "en"
   # Available languages
   # languages:
   #   - all
@@ -857,7 +857,7 @@ engines:
     engine: imdb
     shortcut: imdb
     timeout: 6.0
-    disabled: true
+    disabled: false
 
   - name: ina
     engine: ina
@@ -1468,7 +1468,7 @@ engines:
   - name: twitter
     shortcut: tw
     engine: twitter
-    disabled: true
+    disabled: false
 
   # maybe in a fun category
   #  - name: uncyclopedia
@@ -1875,6 +1875,7 @@ engines:
   - name: brave
     shortcut: brave
     engine: xpath
+    disabled: false
     paging: true
     time_range_support: true
     first_page_num: 0
