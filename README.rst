@@ -10,7 +10,7 @@
 
 ----
 
-Privacy-respecting, hackable `metasearch engine`_
+Privacy-respecting, hackable metasearch engine.
 
 If you are looking for running instances, ready to use, then visit onlinefinder.com.
 
