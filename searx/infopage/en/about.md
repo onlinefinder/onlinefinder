@@ -4,16 +4,6 @@ OnlineFinder is a [metasearch engine], aggregating the results of other
 {{link('search engines', 'preferences')}} while not storing information about
 its users.
 
-OnlineFinder established in 1996, was one of the very first search portals on the 
-internet. The original goal was to have a place for people and businesses to interact
-with listings containing contact information and website links. Later OnlineFinder
-started provideing free email and free websites. 
-
-Google contacted us asking us to use their code but we declined. During a 24 hour lapse,
-a cyber-squatter purchased our .net domain and shortly after we found that our email and
-sites were being blocked by major corporatoins, including Google because we offered 
-those services for free. 
-
 ## Why use it?
 
 - OnlineFinder doesn't generate a profile about you.
@@ -44,6 +34,23 @@ inspired by the [Seeks project].  It provides basic privacy by mixing your
 queries with searches on other platforms without storing search data.  OnlineFinder
 can be added to your browser's search bar; moreover, it can be set as the
 default search engine.
+
+## History of OnlineFinder
+
+OnlineFinder was established in 1996 as one of the very first search portals on the 
+internet. The original goal was to have a place for people and businesses to find things
+and people online, interact with listings containing contact information and website links.
+Later OnlineFinder started provideing free email and free websites. 
+
+When Google first started, they contacted us asking us to use their code but we declined.
+During a 24 hour lapse, a cyber-squatter purchased our .net domain and shortly after we
+found that our email and sites were being blocked by major corporatoins, including Google;
+because we offered those services for free. 
+
+Nowadays, we compile ALL of the search engines under our name, free for you to use.
+You can turn on or off any search engine to scan in the preferences for your searches.
+
+100% Private searches! Tons of search engines all under one search page! Easy to use!
 
 [OnlineFinder sources]: {{GIT_URL}}
 [OnlineFinder docs]: {{get_setting('brand.docs_url')}}
