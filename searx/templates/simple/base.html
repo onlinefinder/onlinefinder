@@ -61,7 +61,7 @@
   </main>
   <footer>
     <p>
-    {{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">OnlineFinder</a> -<br>{{ _('A privacy-respecting, search engine.') }}<br/>
+    {{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">OnlineFinder</a> &copy 2023<br>{{ _('A privacy-respecting, search engine.') }}<br/>
         {% if enable_metrics %} <a href="{{ url_for('stats') }}">{{ _('Engine Stats') }}</a>{% endif %}
         {% if get_setting('brand.public_instances') %}
         {% endif %}
