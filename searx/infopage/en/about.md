@@ -45,16 +45,7 @@ search engine, see your browser's documentation:
 ## History of OnlineFinder
 
 OnlineFinder was established in 1996 as one of the very first search portals on the 
-internet. The original goal was to have a place for people and businesses to find things
-and people online, interact with listings containing contact information and website links.
-Later OnlineFinder started provideing free email and free websites. 
-
-When Google first started, they contacted us asking us to use their code but we declined.
-During a 24 hour lapse, a cyber-squatter purchased our .net domain and shortly after we
-found that our email and sites were being blocked by major corporatoins, including Google;
-because we offered those services for free. 
-
-Nowadays, we compile ALL of the search engines under our name, free for you to use.
+internet. Nowadays, we compile a vast amount of the search engines under one page, free for you to use.
 You can turn on or off any search engine to scan in the preferences for your searches.
 
 100% Private searches! Tons of search engines all under one search page! Easy to use!
