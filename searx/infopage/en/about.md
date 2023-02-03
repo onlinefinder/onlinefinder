@@ -1,8 +1,20 @@
 # About OnlineFinder
 
 OnlineFinder is a [metasearch engine], aggregating the results of other
-{{link('search engines', 'preferences')}} while not storing information about
-its users.
+search engines while not storing information about its users.
+
+## How does it work?
+When you use OnlineFinder to search the internet, we collect information from places
+like google, bing, wikipedia, etc... and then sort and present it to you. Those websites
+think OnlineFinder is the one doing the searches, not you. You leave no fingerprint behind,
+no advertising tracking, and no concerns about your searches being monitored by us
+or by the search engines we scrape for you.
+
+## How secure is it?
+The only information stored is on your own browser, not our server. It's a cookie to set 
+your preferences of background color and other features in the preferences section. If you
+clear your cookies then you will need to choose your preferences again but most don't even
+use the heavy-duty preferences options.
 
 ## Why use it?
 
@@ -27,13 +39,6 @@ search engine, see your browser's documentation:
 - [Chromium]-based browsers only add websites that the user navigates to without
   a path.
 
-## How does it work?
-
-OnlineFinder is a fork from the well-known [searx] [metasearch engine] which was
-inspired by the [Seeks project].  It provides basic privacy by mixing your
-queries with searches on other platforms without storing search data.  OnlineFinder
-can be added to your browser's search bar; moreover, it can be set as the
-default search engine.
 
 ## History of OnlineFinder
 
