@@ -145,8 +145,8 @@ module.exports = function (grunt) {
           svgo: ['--config', 'svg4web.svgo.js']
         },
         files: {
-          '<%= _templates %>/simple/searxng-wordmark.min.svg': '<%= _brand %>/searxng-wordmark.svg',
-          'img/searxng.svg': '<%= _brand %>/searxng.svg',
+          '<%= _templates %>/simple/onlinefinder-wordmark.min.svg': '<%= _brand %>/onlinefinder-wordmark.svg',
+          'img/onlinefinder.svg': '<%= _brand %>/onlinefinder.svg',
           'img/img_load_error.svg': '<%= _brand %>/img_load_error.svg'
         }
       },
@@ -155,15 +155,15 @@ module.exports = function (grunt) {
           svgo: ['--config', 'svg4favicon.svgo.js']
         },
         files: {
-          'img/favicon.svg': '<%= _brand %>/searxng-wordmark.svg'
+          'img/favicon.svg': '<%= _brand %>/onlinefinder-wordmark.svg'
         }
       },
     },
     svg2png: {
       favicon: {
         files: {
-          'img/favicon.png': '<%= _brand %>/searxng-wordmark.svg',
-          'img/searxng.png': '<%= _brand %>/searxng.svg',
+          'img/favicon.png': '<%= _brand %>/onlinefinder-wordmark.svg',
+          'img/onlinefinder.png': '<%= _brand %>/onlinefinder.svg',
         }
       }
     },
