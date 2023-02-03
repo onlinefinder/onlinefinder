@@ -286,11 +286,6 @@ categories_as_tabs:
   science:
   files:
   social media:
-  
-use_default_settings:
-  engines:
-    remove:
-      - duckduckgo
 
 engines:
   - name: 9gag
@@ -367,7 +362,7 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: true
+    disabled: false
 
   - name: bing images
     engine: bing_images
@@ -560,6 +555,7 @@ engines:
   - name: duckduckgo
     engine: duckduckgo
     shortcut: ddg
+    disabled: true
 
   - name: duckduckgo images
     engine: duckduckgo_images
