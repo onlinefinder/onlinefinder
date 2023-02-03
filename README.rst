@@ -30,7 +30,7 @@ IRC
 Differences to searx
 ====================
 
-OnlineFinder is a fork of SearXNG.  Here are some of the changes:
+OnlineFinder is a fork of SearXNG.
 
 
 
