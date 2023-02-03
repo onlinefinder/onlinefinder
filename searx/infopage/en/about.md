@@ -1,7 +1,8 @@
 # About OnlineFinder
 
-OnlineFinder is a [metasearch engine], aggregating the results of other
-search engines while not storing information about its users.
+OnlineFinder is a metasearch engine, aggregating the results of other search engines 
+while not storing information about its users. We let you use other search engines without
+having to give them your digigal history and identity.
 
 ## How does it work?
 When you use OnlineFinder to search the internet, we collect information from places
@@ -19,9 +20,10 @@ preferences options.
 ## Why use it?
 
 - OnlineFinder doesn't generate a profile about you.
+- We are like an identity firewall protecting you from search engines.
 - When we scrape from engines like Google, we block your identity.
 - We doesn't care about what you search for.
-- We never shares anything with a third-party, and it can't be used to compromise you.
+- We never share anything with a third-party, and it can't be used to compromise you.
 - OnlineFinder is a free metasearch engine.
 
 If you do care about privacy, want to be a conscious user, or otherwise believe
