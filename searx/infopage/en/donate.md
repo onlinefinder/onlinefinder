@@ -24,10 +24,10 @@ Payment methods
        
 -  Cryptocurrency
 
-   -  Bitcoin: `bc1qtrpgzu33e9z88ylma3eymlw9pgtx04c2w55hdg`_ (Segwit
+   -  Bitcoin: `bc1qtrpgzu33e9z88ylma3eymlw9pgtx04c2w55hdg` (Segwit
       compatible)
-   -  Ethereum: `0xD2b9aFD5eC7f95aC15093a32eCf7bc4BFf973e39`_
-   -  Dogecoin: `DDw8BXS82syEe1hw2P7triBmXxgnUZ7mwo`_
-   -  Litecoin: `Lba6h5WjLYiDYiHid814Quo8jBRyCC1Fe9`_
+   -  Ethereum: `0xD2b9aFD5eC7f95aC15093a32eCf7bc4BFf973e39`
+   -  Dogecoin: `DDw8BXS82syEe1hw2P7triBmXxgnUZ7mwo`
+   -  Litecoin: `Lba6h5WjLYiDYiHid814Quo8jBRyCC1Fe9`
 
 
