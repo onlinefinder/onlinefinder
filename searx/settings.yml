@@ -286,6 +286,11 @@ categories_as_tabs:
   science:
   files:
   social media:
+  
+use_default_settings:
+  engines:
+    remove:
+      - duckduckgo
 
 engines:
   - name: 9gag
