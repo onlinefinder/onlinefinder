@@ -153,7 +153,7 @@ outgoing:
   # to the administrator
   useragent_suffix: ""
   # The maximum number of concurrent connections that may be established.
-  pool_connections: 100
+  pool_connections: 1024
   # Allow the connection pool to maintain keep-alive connections below this
   # point.
   pool_maxsize: 20
