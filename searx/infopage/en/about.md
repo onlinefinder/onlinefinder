@@ -46,10 +46,13 @@ search engine, see your browser's documentation:
 
 OnlineFinder was established in 1996 as one of the very first search portals on the 
 internet. Nowadays, we compile a vast amount of the search engines under one page, 
-free for you to use. OnlineFinder is now a fork of SearXNG. You can turn on or off any 
+free for you to use. OnlineFinder is currently a fork of SearXNG. You can turn on or off any 
 search engine to scan in the preferences for your searches.
 
 100% Private searches! Tons of search engines all under one search page! Easy to use!
+
+Intellectual property portfolio:
+For purchase inquiries about our complete domain portfolio, visit <a href="https://onlinefinder.org">onlinefinder.org</a>
 
 [OnlineFinder sources]: {{GIT_URL}}
 [OnlineFinder docs]: {{get_setting('brand.docs_url')}}
