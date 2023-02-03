@@ -15,7 +15,7 @@ general:
 
 brand:
   new_issue_url: https://github.com/onlinefinder/onlinefinder/issues/new
-  docs_url: https://docs.searxng.org/
+  docs_url: https://docs.onlinefinder.org/
   public_instances: https://onlinefinder.com
   wiki_url: https://github.com/onlinefinder/onlinefinder/wiki
   issue_url: https://github.com/onlinefinder/onlinefinder/issues
