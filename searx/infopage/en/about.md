@@ -13,8 +13,8 @@ or by the search engines we scrape for you.
 ## How secure is it?
 The only information stored is on your own browser, not our server. It's a cookie to set 
 your preferences of background color and other features in the preferences section. If you
-clear your cookies then you will need to choose your preferences again but most don't even
-use the heavy-duty preferences options.
+clear your cookies then you will need to choose your preferences again for the heavy-duty
+preferences options.
 
 ## Why use it?
 
