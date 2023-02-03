@@ -2,7 +2,7 @@
 
 OnlineFinder is a metasearch engine, aggregating the results of other search engines 
 while not storing information about its users. We let you use other search engines without
-having to give them your digigal history and identity.
+having to give them your digital history and identity.
 
 ## How does it work?
 When you use OnlineFinder to search the internet, we collect information from places
