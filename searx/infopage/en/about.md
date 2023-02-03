@@ -45,8 +45,9 @@ search engine, see your browser's documentation:
 ## History of OnlineFinder
 
 OnlineFinder was established in 1996 as one of the very first search portals on the 
-internet. Nowadays, we compile a vast amount of the search engines under one page, free for you to use.
-You can turn on or off any search engine to scan in the preferences for your searches.
+internet. Nowadays, we compile a vast amount of the search engines under one page, 
+free for you to use. OnlineFinder is now a fork of SearXNG. You can turn on or off any 
+search engine to scan in the preferences for your searches.
 
 100% Private searches! Tons of search engines all under one search page! Easy to use!
 
