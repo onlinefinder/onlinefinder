@@ -19,8 +19,7 @@ Payment methods
 
 -  Credit/debit card and bank transfer
 
-   -  `Buy Me a Coffee`_ (one time donation)
-       <a href="https://buymeacoffee.com/onlinefinder"> Buy Me a Coffee:</a> https://buymeacoffee.com/onlinefinder
+   -  <a href="https://buymeacoffee.com/onlinefinder"> Buy Me a Coffee:</a> https://buymeacoffee.com/onlinefinder
        
 -  Cryptocurrency
 
