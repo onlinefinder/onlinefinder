@@ -855,7 +855,7 @@ msgid ""
 msgstr "Список cookies и их значений, которые SearXNG хранит в вашем браузере."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "SearXNG ничего от вас не скрывает."
 
 #: searx/templates/simple/preferences.html:401

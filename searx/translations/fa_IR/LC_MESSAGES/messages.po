@@ -844,7 +844,7 @@ msgid ""
 msgstr "این فهرست کلوچک‌ها و مقدارهایی است که SearXNG در رایانهٔ شما نگه می‌دارد."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "با این فهرست، می‌توانید شفافیت SearXNG را بیازمایید."
 
 #: searx/templates/simple/preferences.html:401

@@ -829,7 +829,7 @@ msgid ""
 msgstr "これはクッキーのリストで、これらの値はあなたのコンピュータに保存されています。"
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "このリストによって、あなたは SearXNG の透明性を評価できます。"
 
 #: searx/templates/simple/preferences.html:401

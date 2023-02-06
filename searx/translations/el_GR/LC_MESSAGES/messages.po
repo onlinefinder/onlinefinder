@@ -859,7 +859,7 @@ msgstr ""
 "SearXNG στον υπολογιστή σας."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Με αυτόν τον κατάλογο, μπορείτε να αξιολογήσετε τη διαφάνεια του SearXNG."
 
 #: searx/templates/simple/preferences.html:401

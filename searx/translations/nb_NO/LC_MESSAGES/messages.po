@@ -834,7 +834,7 @@ msgstr ""
 "på datamaskinen din."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Med denne listen kan du gjennomse SearXNG."
 
 #: searx/templates/simple/preferences.html:401

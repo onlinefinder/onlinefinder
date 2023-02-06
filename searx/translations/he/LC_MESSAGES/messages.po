@@ -839,7 +839,7 @@ msgid ""
 msgstr "זוהי רשימת העוגיות וערכיהן אשר SearXNG מאחסן על המחשב שלך."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "בעזרת רשימה זאת, באפשרותך לגשת אל SearXNG transparency."
 
 #: searx/templates/simple/preferences.html:401

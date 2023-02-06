@@ -850,7 +850,7 @@ msgstr ""
 "stochează pe computerul dvs."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Cu această listă, puteți evalua transparența SearXNG."
 
 #: searx/templates/simple/preferences.html:401

@@ -840,7 +840,7 @@ msgstr ""
 "அவற்றின் மதிப்புகள்."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "அந்த பட்டியலின் மூலம், நீங்கள் SearXNG வெளிப்படைத்தன்மையை மதிப்பிடலாம்."
 
 #: searx/templates/simple/preferences.html:401

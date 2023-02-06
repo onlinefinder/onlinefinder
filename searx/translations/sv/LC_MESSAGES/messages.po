@@ -850,7 +850,7 @@ msgstr ""
 "dator."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Med den listan kan du bedöma SearXNG-transparens."
 
 #: searx/templates/simple/preferences.html:401

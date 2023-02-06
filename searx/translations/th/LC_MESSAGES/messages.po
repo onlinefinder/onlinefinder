@@ -818,7 +818,7 @@ msgid ""
 msgstr "นี่คือรายการคุกกี้และค่าของคุกกี้ที่เซียร์เอ็กซ์เอ็นจีจัดเก็บไว้ในคอมพิวเตอร์ของคุณ"
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "ด้วยรายการดังกล่าว คุณสามารถประเมินความโปร่งใสของเซียร์เอ็กซ์เอ็นจีได้"
 
 #: searx/templates/simple/preferences.html:401

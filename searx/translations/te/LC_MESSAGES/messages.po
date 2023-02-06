@@ -831,7 +831,7 @@ msgstr ""
 "విలువలు."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "ఆ జాబితాతో, మీరు SearXNG పారదర్శకతను అంచనా వేయవచ్చు."
 
 #: searx/templates/simple/preferences.html:401

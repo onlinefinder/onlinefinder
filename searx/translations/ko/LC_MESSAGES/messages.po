@@ -823,7 +823,7 @@ msgid ""
 msgstr "SearXNG이 컴퓨터에 저장하는 쿠키 목록입니다."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "이 목록으로 SearXNG의 투명성을 판단할 수 있습니다."
 
 #: searx/templates/simple/preferences.html:401

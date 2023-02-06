@@ -833,7 +833,7 @@ msgstr ""
 "kompiuterije."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Su šiuo sąrašu, jūs gaunate prieiga prie SearXNG permatomumą."
 
 #: searx/templates/simple/preferences.html:401

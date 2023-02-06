@@ -822,7 +822,7 @@ msgid ""
 msgstr "這是 SearXNG 在您的計算機上存儲的 Cookie 的列表及對應的值。"
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "您可以憑此列表評估 SearXNG 的透明度。"
 
 #: searx/templates/simple/preferences.html:401

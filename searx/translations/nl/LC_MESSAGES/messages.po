@@ -859,7 +859,7 @@ msgstr ""
 "opslaat."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Met die lijst kan je de transparantie van SearXNG beoordelen."
 
 #: searx/templates/simple/preferences.html:401

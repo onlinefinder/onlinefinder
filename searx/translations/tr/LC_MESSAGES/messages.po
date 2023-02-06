@@ -851,7 +851,7 @@ msgstr ""
 "değerlerinin bir listesidir."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Bu listeyle SeaXNG şeffaflığına ulaşbilirsiniz."
 
 #: searx/templates/simple/preferences.html:401

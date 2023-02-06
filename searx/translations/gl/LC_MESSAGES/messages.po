@@ -841,7 +841,7 @@ msgstr ""
 "computadora."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Con esta lista podes dar conta da transparencia de SearXNG."
 
 #: searx/templates/simple/preferences.html:401

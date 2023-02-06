@@ -860,7 +860,7 @@ msgstr ""
 " énumérés ci-dessous."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess SearXNG transparency."
+msgid "With that list, you can assess OnlineFinder's transparency."
 msgstr "Avec cette liste, vous pouvez juger de la transparence de searx."
 
 #: searx/templates/simple/preferences.html:401
