@@ -750,7 +750,7 @@ msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "Διαμεσολάβιση φόρτωσης αποτελεσμάτων εικόνων μέσω του SearXNG"
 
 #: searx/templates/simple/preferences.html:281

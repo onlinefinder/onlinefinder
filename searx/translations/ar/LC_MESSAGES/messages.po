@@ -740,7 +740,7 @@ msgid "Disabled"
 msgstr "غير مُفَعَّل"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "تمرير نتائج البحث عن الصور عبر بروكسي SearXNG"
 
 #: searx/templates/simple/preferences.html:281

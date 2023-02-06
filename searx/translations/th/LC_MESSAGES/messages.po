@@ -711,7 +711,7 @@ msgid "Disabled"
 msgstr "ปิดใช้งาน"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "การแสดงพร็อกซี่ของภาพผ่าน เซียร์เอ็กซ์เอ็นจี"
 
 #: searx/templates/simple/preferences.html:281

@@ -723,7 +723,7 @@ msgid "Disabled"
 msgstr "Išjungtas"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "Persiunčiami paveikslai per SearXNG"
 
 #: searx/templates/simple/preferences.html:281

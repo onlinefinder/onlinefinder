@@ -743,7 +743,7 @@ msgid "Disabled"
 msgstr "Inaktivál"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "Képek megjelenítése a SearXNG proxyn keresztül"
 
 #: searx/templates/simple/preferences.html:281

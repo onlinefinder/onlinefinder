@@ -720,7 +720,7 @@ msgid "Disabled"
 msgstr "비활성화됨"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "SearXNG를 통해 이미지 결과 우회"
 
 #: searx/templates/simple/preferences.html:281

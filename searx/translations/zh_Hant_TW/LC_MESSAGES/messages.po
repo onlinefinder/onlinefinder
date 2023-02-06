@@ -719,7 +719,7 @@ msgid "Disabled"
 msgstr "已停用"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "通過 SearXNG 代理訪問圖片結果"
 
 #: searx/templates/simple/preferences.html:281

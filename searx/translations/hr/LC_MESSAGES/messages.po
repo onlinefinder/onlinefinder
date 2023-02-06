@@ -739,7 +739,7 @@ msgid "Disabled"
 msgstr "Onemogućeno"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "Proxy slikovni rezultati putem SearXNG-a"
 
 #: searx/templates/simple/preferences.html:281

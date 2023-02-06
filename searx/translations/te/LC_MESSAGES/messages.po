@@ -722,7 +722,7 @@ msgid "Disabled"
 msgstr "దిశల్డ్"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "SearXNG ద్వారా ఇమేజ్ ఫలితాలను ప్రాక్సీ చేస్తోంది"
 
 #: searx/templates/simple/preferences.html:281

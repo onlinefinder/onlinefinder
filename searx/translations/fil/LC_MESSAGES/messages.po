@@ -731,7 +731,7 @@ msgid "Disabled"
 msgstr "Hindi paganahin"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "Ang pag-proxy ng mga resulta ng imahe sa pamamagitan ng SearXNG"
 
 #: searx/templates/simple/preferences.html:281

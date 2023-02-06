@@ -738,7 +738,7 @@ msgid "Disabled"
 msgstr "Онемогућено"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "Прокси резултат слике преко СеарКСНГ"
 
 #: searx/templates/simple/preferences.html:281

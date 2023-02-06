@@ -733,7 +733,7 @@ msgid "Disabled"
 msgstr "நிறுத்தப்பட்டது"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "SearXNG மூலம் படத்தின் முடிவுகளைப் பதிலீடு செய்கிறது"
 
 #: searx/templates/simple/preferences.html:281

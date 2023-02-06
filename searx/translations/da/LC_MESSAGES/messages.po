@@ -742,7 +742,7 @@ msgid "Disabled"
 msgstr "Slået fra"
 
 #: searx/templates/simple/preferences.html:276
-msgid "Proxying image results through SearXNG"
+msgid "Proxying image results through OnlineFinder"
 msgstr "Bearbejder billedresulter gennem SearXNG"
 
 #: searx/templates/simple/preferences.html:281
