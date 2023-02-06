@@ -666,7 +666,7 @@ msgid "Theme"
 msgstr "Θέμα"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change OnlineFinder's layout"
+msgid "Change OnlineFinder layout"
 msgstr "Τροποποίηση διάταξης του SearXNG"
 
 #: searx/templates/simple/preferences.html:206
@@ -839,7 +839,7 @@ msgid "Examples"
 msgstr "Παραδείγματα"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of OnlineFinder's instant answering modules."
+msgid "This is the list of OnlineFinder instant answering modules."
 msgstr "Αυτός είναι ο κατάλογος των ενοτήτων άμεσης απάντησης του SearXNG."
 
 #: searx/templates/simple/preferences.html:376
@@ -859,7 +859,7 @@ msgstr ""
 "SearXNG στον υπολογιστή σας."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess OnlineFinder's transparency."
+msgid "With that list, you can assess OnlineFinder transparency."
 msgstr "Με αυτόν τον κατάλογο, μπορείτε να αξιολογήσετε τη διαφάνεια του SearXNG."
 
 #: searx/templates/simple/preferences.html:401

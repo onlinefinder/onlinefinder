@@ -634,7 +634,7 @@ msgid "Theme"
 msgstr "ธีม"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change OnlineFinder's layout"
+msgid "Change OnlineFinder layout"
 msgstr "เปลี่ยนเค้าโครง เซียร์เอ็กซ์เอ็นจี"
 
 #: searx/templates/simple/preferences.html:206
@@ -800,7 +800,7 @@ msgid "Examples"
 msgstr "ตัวอย่าง"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of OnlineFinder's instant answering modules."
+msgid "This is the list of OnlineFinder instant answering modules."
 msgstr "นี่คือรายการโมดูลที่ตอบรับทันทีของเซียร์เอ็กซ์เอ็นจี"
 
 #: searx/templates/simple/preferences.html:376
@@ -818,7 +818,7 @@ msgid ""
 msgstr "นี่คือรายการคุกกี้และค่าของคุกกี้ที่เซียร์เอ็กซ์เอ็นจีจัดเก็บไว้ในคอมพิวเตอร์ของคุณ"
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess OnlineFinder's transparency."
+msgid "With that list, you can assess OnlineFinder transparency."
 msgstr "ด้วยรายการดังกล่าว คุณสามารถประเมินความโปร่งใสของเซียร์เอ็กซ์เอ็นจีได้"
 
 #: searx/templates/simple/preferences.html:401

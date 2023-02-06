@@ -660,7 +660,7 @@ msgid "Theme"
 msgstr "Tema"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change OnlineFinder's layout"
+msgid "Change OnlineFinder layout"
 msgstr "Ændr SearXNG layout"
 
 #: searx/templates/simple/preferences.html:206
@@ -831,7 +831,7 @@ msgid "Examples"
 msgstr "Eksempler"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of OnlineFinder's instant answering modules."
+msgid "This is the list of OnlineFinder instant answering modules."
 msgstr "Dette er en liste over SearXNG's hurtig-svar moduler."
 
 #: searx/templates/simple/preferences.html:376
@@ -851,7 +851,7 @@ msgstr ""
 "din computer."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess OnlineFinder's transparency."
+msgid "With that list, you can assess OnlineFinder transparency."
 msgstr "Med denne liste kan du vurdere SearXNG's åbenhed."
 
 #: searx/templates/simple/preferences.html:401

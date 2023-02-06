@@ -640,7 +640,7 @@ msgid "Theme"
 msgstr "主題"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change OnlineFinder's layout"
+msgid "Change OnlineFinder layout"
 msgstr "更改 SearXNG 佈局"
 
 #: searx/templates/simple/preferences.html:206
@@ -804,7 +804,7 @@ msgid "Examples"
 msgstr "範例"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of OnlineFinder's instant answering modules."
+msgid "This is the list of OnlineFinder instant answering modules."
 msgstr "這是 SearXNG 即時回應模塊列表。"
 
 #: searx/templates/simple/preferences.html:376
@@ -822,7 +822,7 @@ msgid ""
 msgstr "這是 SearXNG 在您的計算機上存儲的 Cookie 的列表及對應的值。"
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess OnlineFinder's transparency."
+msgid "With that list, you can assess OnlineFinder transparency."
 msgstr "您可以憑此列表評估 SearXNG 的透明度。"
 
 #: searx/templates/simple/preferences.html:401

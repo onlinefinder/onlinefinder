@@ -643,7 +643,7 @@ msgid "Theme"
 msgstr "థీమ్"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change OnlineFinder's layout"
+msgid "Change OnlineFinder layout"
 msgstr "SearXNG లేఅవుట్‌ని మార్చండి"
 
 #: searx/templates/simple/preferences.html:206
@@ -811,7 +811,7 @@ msgid "Examples"
 msgstr "ఉదాహరణలు"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of OnlineFinder's instant answering modules."
+msgid "This is the list of OnlineFinder instant answering modules."
 msgstr "ఇది SearXNG యొక్క తక్షణ సమాధాన మాడ్యూల్‌ల జాబితా."
 
 #: searx/templates/simple/preferences.html:376
@@ -831,7 +831,7 @@ msgstr ""
 "విలువలు."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess OnlineFinder's transparency."
+msgid "With that list, you can assess OnlineFinder transparency."
 msgstr "ఆ జాబితాతో, మీరు SearXNG పారదర్శకతను అంచనా వేయవచ్చు."
 
 #: searx/templates/simple/preferences.html:401

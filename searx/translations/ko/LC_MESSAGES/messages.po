@@ -640,7 +640,7 @@ msgid "Theme"
 msgstr "테마"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change OnlineFinder's layout"
+msgid "Change OnlineFinder layout"
 msgstr "SearXNG 레이아웃 변경"
 
 #: searx/templates/simple/preferences.html:206
@@ -805,7 +805,7 @@ msgid "Examples"
 msgstr "예시"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of OnlineFinder's instant answering modules."
+msgid "This is the list of OnlineFinder instant answering modules."
 msgstr "SearXNG의 즉각응답 모듈 목록입니다."
 
 #: searx/templates/simple/preferences.html:376
@@ -823,7 +823,7 @@ msgid ""
 msgstr "SearXNG이 컴퓨터에 저장하는 쿠키 목록입니다."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess OnlineFinder's transparency."
+msgid "With that list, you can assess OnlineFinder transparency."
 msgstr "이 목록으로 SearXNG의 투명성을 판단할 수 있습니다."
 
 #: searx/templates/simple/preferences.html:401

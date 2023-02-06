@@ -646,7 +646,7 @@ msgid "Theme"
 msgstr "Tema"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change OnlineFinder's layout"
+msgid "Change OnlineFinder layout"
 msgstr "Pakeiskite SearXNG išdėstymą"
 
 #: searx/templates/simple/preferences.html:206
@@ -813,7 +813,7 @@ msgstr "Pavyzdžiai"
 
 #: searx/templates/simple/preferences.html:365
 #, fuzzy
-msgid "This is the list of OnlineFinder's instant answering modules."
+msgid "This is the list of OnlineFinder instant answering modules."
 msgstr "Šis sąrašas yra SearXNG"
 
 #: searx/templates/simple/preferences.html:376
@@ -833,7 +833,7 @@ msgstr ""
 "kompiuterije."
 
 #: searx/templates/simple/preferences.html:396
-msgid "With that list, you can assess OnlineFinder's transparency."
+msgid "With that list, you can assess OnlineFinder transparency."
 msgstr "Su šiuo sąrašu, jūs gaunate prieiga prie SearXNG permatomumą."
 
 #: searx/templates/simple/preferences.html:401
