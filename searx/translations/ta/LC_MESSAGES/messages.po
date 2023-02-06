@@ -820,7 +820,7 @@ msgid "Examples"
 msgstr "எடுத்துக்காட்டுகள்"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of SearXNG's instant answering modules."
+msgid "This is the list of OnlineFinder's instant answering modules."
 msgstr "இது SearXNG இன் உடனடி பதில் தொகுதிகளின் பட்டியல்."
 
 #: searx/templates/simple/preferences.html:376

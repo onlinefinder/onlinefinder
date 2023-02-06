@@ -824,7 +824,7 @@ msgid "Examples"
 msgstr "Esimerkit"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of SearXNG's instant answering modules."
+msgid "This is the list of OnlineFinder's instant answering modules."
 msgstr "Tämä on luettelo SearXNG:n pikavastausmoduuleista."
 
 #: searx/templates/simple/preferences.html:376

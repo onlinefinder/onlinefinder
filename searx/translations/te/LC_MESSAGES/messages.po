@@ -811,7 +811,7 @@ msgid "Examples"
 msgstr "ఉదాహరణలు"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of SearXNG's instant answering modules."
+msgid "This is the list of OnlineFinder's instant answering modules."
 msgstr "ఇది SearXNG యొక్క తక్షణ సమాధాన మాడ్యూల్‌ల జాబితా."
 
 #: searx/templates/simple/preferences.html:376

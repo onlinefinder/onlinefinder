@@ -800,7 +800,7 @@ msgid "Examples"
 msgstr "Piemēri"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of SearXNG's instant answering modules."
+msgid "This is the list of OnlineFinder's instant answering modules."
 msgstr "Šis ir SearXNG tūlītējās atbildēšanas moduļu saraksts."
 
 #: searx/templates/simple/preferences.html:376

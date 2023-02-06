@@ -808,7 +808,7 @@ msgid "Examples"
 msgstr "示例"
 
 #: searx/templates/simple/preferences.html:365
-msgid "This is the list of SearXNG's instant answering modules."
+msgid "This is the list of OnlineFinder's instant answering modules."
 msgstr "这是 SearXNG 即时回应模块的列表。"
 
 #: searx/templates/simple/preferences.html:376

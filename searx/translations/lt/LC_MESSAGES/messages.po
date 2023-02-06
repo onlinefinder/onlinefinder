@@ -813,7 +813,7 @@ msgstr "Pavyzdžiai"
 
 #: searx/templates/simple/preferences.html:365
 #, fuzzy
-msgid "This is the list of SearXNG's instant answering modules."
+msgid "This is the list of OnlineFinder's instant answering modules."
 msgstr "Šis sąrašas yra SearXNG"
 
 #: searx/templates/simple/preferences.html:376
