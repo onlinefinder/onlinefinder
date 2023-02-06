@@ -648,7 +648,7 @@ msgid "Theme"
 msgstr "Drakt"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change SearXNG layout"
+msgid "Change OnlineFinder's layout"
 msgstr "Endre SearXNG-sideoppsett"
 
 #: searx/templates/simple/preferences.html:206

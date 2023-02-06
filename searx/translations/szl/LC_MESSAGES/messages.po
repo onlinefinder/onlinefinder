@@ -656,7 +656,7 @@ msgid "Theme"
 msgstr "Tymat"
 
 #: searx/templates/simple/preferences.html:203
-msgid "Change SearXNG layout"
+msgid "Change OnlineFinder's layout"
 msgstr "Zmiyń ukłod ôd SearXNG"
 
 #: searx/templates/simple/preferences.html:206
