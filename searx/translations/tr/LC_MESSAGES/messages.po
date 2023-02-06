@@ -386,7 +386,7 @@ msgstr "Tor kontrol eklentisi"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr ""
 "Bu eklenti istek adresinin TOR çıkış düğümü olup olmadığını kontrol eder "
 "ve öyleyse kullanıcıya haber verir, check.torproject.org benzeri ama "

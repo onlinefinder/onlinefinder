@@ -383,7 +383,7 @@ msgstr "Przidowek sprawdzanio necu Tor"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr ""
 "Tyn przidowek sprawdzo, jeźli adresa ôd żōndanio to je wynzoł wyjścio TOR i "
 "informuje używocza, jeźli tak je. To jak check.torproject.org ino ôd searxng."

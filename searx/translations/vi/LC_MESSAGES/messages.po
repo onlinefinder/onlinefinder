@@ -376,7 +376,7 @@ msgstr "Kiểm tra Tor plugin"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr ""
 "Plugin này kiểm tra nếu một địa chỉ được yêu cầu có phải là một TOR exit "
 "node hay không, và thông báo lại cho người dùng. Giống như "

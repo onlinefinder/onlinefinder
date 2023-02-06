@@ -373,7 +373,7 @@ msgstr "Tor 검사 플러그인"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr ""
 "이 플러그인은 요청한 주소가 TOR 출구 노드인지 확인하고 사용자에게 알려줍니다, check.torproject.org 와 "
 "비슷하지만 searxng 에서 제공됩니다."

@@ -380,7 +380,7 @@ msgstr "Tor 网络检测插件"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr "该插件检查请求的 IP 地址是否为 Tor 出口节点，如果是则通知用户，可视为 searxng 中的 check.torproject.org 。"
 
 #: searx/plugins/tor_check.py:62

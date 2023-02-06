@@ -391,7 +391,7 @@ msgstr "Плагин проверки Tor'a"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr ""
 "Этот плагин проверяет, не является ли запрошенный адрес выходным узлом "
 "Tor'a, и информирует пользователя, если это так, как "

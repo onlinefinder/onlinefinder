@@ -389,7 +389,7 @@ msgstr "Plugin de comprovació de Tor"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr ""
 "Aquest plugin comprova si l'adreça de la sol·licitud és un node de "
 "sortida TOR i informa a l'usuari si ho és, com check.torproject.org però "

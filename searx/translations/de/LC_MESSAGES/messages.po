@@ -400,7 +400,7 @@ msgstr "Tor Prüf-Plugin"
 #: searx/plugins/tor_check.py:28
 msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
-"informs the user if it is, like check.torproject.org but from searxng."
+"informs the user if it is, like check.torproject.org but from onlinefinder."
 msgstr ""
 "Dieses Plugin prüft, ob es sich bei der Adresse der Anfrage um einen TOR-"
 "Exit-Knoten handelt und informiert den Benutzer, wenn dies der Fall ist. "
