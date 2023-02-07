@@ -56,16 +56,6 @@ Contributing is easier
 .. _Development Quickstart: https://docs.oninefinder.org/dev/quickstart.html
 
 
-Translations
-============
-
-We need translators, suggestions are welcome at
-https://translate.codeberg.org/projects/onlinefinder/onlinefinder/
-
-.. figure:: https://translate.codeberg.org/widgets/onlinefinder/-/multi-auto.svg
-   :target: https://translate.codeberg.org/projects/onlinefinder/
-
-
 Make a donation
 ===============
 
