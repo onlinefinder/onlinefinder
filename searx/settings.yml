@@ -1876,7 +1876,6 @@ engines:
   - name: brave
     shortcut: brave
     engine: xpath
-    disabled: false
     paging: true
     time_range_support: true
     first_page_num: 0
