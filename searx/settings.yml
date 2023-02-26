@@ -605,12 +605,12 @@ engines:
       require_api_key: false
       results: HTML
 
-   - name: ebay
-     engine: ebay
-     shortcut: eb
-     base_url: 'https://www.ebay.com'
-     disabled: false
-     timeout: 5
+  #  - name: ebay
+  #    engine: ebay
+  #    shortcut: eb
+  #    base_url: 'https://www.ebay.com'
+  #    disabled: false
+  #    timeout: 5
 
   - name: 1x
     engine: www1x
