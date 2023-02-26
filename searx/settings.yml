@@ -500,7 +500,7 @@ engines:
     engine: duckduckgo_definitions
     shortcut: ddd
     weight: 2
-    disabled: true
+    disabled: false
     tests: *tests_infobox
 
   # cloudflare protected
