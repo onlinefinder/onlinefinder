@@ -1763,7 +1763,7 @@ engines:
     base_url: https://peertube.biz/
     # base_url: https://tube.tardis.world/
     categories: videos
-    disabled: true
+    disabled: false
     timeout: 6.0
 
   - name: mediathekviewweb
@@ -1786,7 +1786,7 @@ engines:
     base_url: https://rumble.com/
     paging: true
     categories: videos
-    disabled: true
+    disabled: false
 
   - name: wordnik
     engine: wordnik
