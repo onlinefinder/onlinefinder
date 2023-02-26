@@ -1441,7 +1441,8 @@ engines:
   - name: twitter
     shortcut: tw
     engine: twitter
-    disabled: true
+    disabled: false
+    display_error_messages: false
 
   # maybe in a fun category
   #  - name: uncyclopedia
@@ -1466,7 +1467,7 @@ engines:
   - name: yahoo
     engine: yahoo
     shortcut: yh
-    disabled: true
+    disabled: false
 
   - name: yahoo news
     engine: yahoo_news
