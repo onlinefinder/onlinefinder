@@ -550,6 +550,7 @@ engines:
     shortcut: wd
     timeout: 3.0
     weight: 2
+    display_error_messages: false
     tests: *tests_infobox
 
   - name: duckduckgo
@@ -604,12 +605,12 @@ engines:
       require_api_key: false
       results: HTML
 
-  # - name: ebay
-  #   engine: ebay
-  #   shortcut: eb
-  #   base_url: 'https://www.ebay.com'
-  #   disabled: true
-  #   timeout: 5
+   - name: ebay
+     engine: ebay
+     shortcut: eb
+     base_url: 'https://www.ebay.com'
+     disabled: false
+     timeout: 5
 
   - name: 1x
     engine: www1x
