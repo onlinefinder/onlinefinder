@@ -43,10 +43,10 @@
 	<div class="dialog-error" role="alert">
     {{ icon_big('warning') }}
     <div>
-	    <p><strong>{{ _('Error!') }}</strong> {{ _('Engines cannot retrieve results') }}:</p>
+	    <p><strong>{{ _('Error!') }}</strong> {{ _('Unresponsive Engines') }}:</p>
       {%- for engine_name, error_type in unresponsive_engines -%}
       <p>{{- engine_name }} (
-        <a href="{{ url_for('stats', engine=engine_name|e) }}" title="{{ _('View error logs and submit a bug report') }}">
+        <a href="{{ url_for('stats', engine=engine_name|e) }}" title="{{ _('Refresh Page.') }}">
           {{- error_type -}}
         </a> ){{- '' -}}
       </p>
@@ -65,7 +65,7 @@
 
         {% if suggestions %}
         <div id="suggestions" role="complementary" aria-labelledby="suggestions-title">
-	  <h4 class="title" id="suggestions-title">{{ _('Suggestions') }} : </h4>
+	  <h4 class="title" id="suggestions-title">{{ _('Suggestions') }}: </h4>
 	  <div class="wrapper">
             {% for suggestion in suggestions %}
             <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}">
