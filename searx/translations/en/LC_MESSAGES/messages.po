@@ -455,7 +455,7 @@ msgid "Privacy policy"
 msgstr ""
 
 #: searx/templates/simple/base.html:75
-msgid "Contact instance maintainer"
+msgid "Refresh Page"
 msgstr ""
 
 #: searx/templates/simple/categories.html:24
@@ -481,11 +481,11 @@ msgid "proxied"
 msgstr ""
 
 #: searx/templates/simple/new_issue.html:64
-msgid "Start submiting a new issue on GitHub"
+msgid "Try Searching Again"
 msgstr ""
 
 #: searx/templates/simple/new_issue.html:66
-msgid "Please check for existing bugs about this engine on GitHub"
+msgid "This issue will be fixed soon"
 msgstr ""
 
 #: searx/templates/simple/new_issue.html:69
