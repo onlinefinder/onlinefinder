@@ -1,11 +1,9 @@
 {
-    "versions": [
-        "109.0",
-        "108.0"
-    ],
-    "os": [
-        "Windows NT 10.0; Win64; x64",
-        "X11; Linux x86_64"
-    ],
-    "ua": "Mozilla/5.0 ({os}; rv:{version}) Gecko/20100101 Firefox/{version}"
+    "ua": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0",
+        "Mozilla/5.0 (Windows NT 10.0; U; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0",
+        "Mozilla/5.0 (Windows NT 10.0; U; WOW64; rv:77.0) Gecko/20100101 Firefox/77.0",
+        "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.10; rv:75.0) Gecko/20100101 Firefox/75.0",
+        "Mozilla/5.0 (X11; Linux; U; rv:74.0) Gecko/20100101 Firefox/74.0"
+    ]
 }
