@@ -69,12 +69,10 @@ def searx_useragent() -> str:
     ).strip()
 
 
-def gen_useragent(os_string: Optional[str] = None) -> str:
-    """Return a random browser User Agent
-
-    See searx/data/useragents.json
+def gen_useragent() -> str:
+    """Return a random firefox browser User Agent
     """
-    return USER_AGENTS['ua'].format(os=os_string or choice(USER_AGENTS['os']), version=choice(USER_AGENTS['versions']))
+    return choice(USER_AGENTS['ua'])
 
 
 class _HTMLTextExtractorException(Exception):
