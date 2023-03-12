@@ -560,6 +560,7 @@ engines:
   - name: duckduckgo
     engine: duckduckgo
     shortcut: ddg
+    display_error_messages: false
 
   - name: duckduckgo images
     engine: duckduckgo_images
