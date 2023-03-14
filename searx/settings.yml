@@ -296,17 +296,20 @@ engines:
     engine: 9gag
     shortcut: 9g
     disabled: true
+    display_error_messages: false
 
   - name: apk mirror
     engine: apkmirror
     timeout: 4.0
     shortcut: apkm
     disabled: true
+    display_error_messages: false
 
   - name: apple app store
     engine: apple_app_store
     shortcut: aps
     disabled: true
+    display_error_messages: false
 
   # Requires Tor
   - name: ahmia
@@ -314,10 +317,12 @@ engines:
     categories: onions
     enable_http: true
     shortcut: ah
+    display_error_messages: false
 
   - name: arch linux wiki
     engine: archlinux
     shortcut: al
+    display_error_messages: false
 
   - name: archive is
     engine: xpath
@@ -337,16 +342,19 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
+      display_error_messages: false
 
   - name: artic
     engine: artic
     shortcut: arc
     timeout: 4.0
+    display_error_messages: false
 
   - name: arxiv
     engine: arxiv
     shortcut: arx
     timeout: 4.0
+    display_error_messages: false
 
   # tmp suspended:  dh key too small
   # - name: base
@@ -357,28 +365,34 @@ engines:
     engine: bandcamp
     shortcut: bc
     categories: music
+    display_error_messages: false
 
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
     base_url: 'https://{language}.wikipedia.org/'
+    display_error_messages: false
 
   - name: bing
     engine: bing
     shortcut: bi
     disabled: true
+    display_error_messages: false
 
   - name: bing images
     engine: bing_images
     shortcut: bii
+    display_error_messages: false
 
   - name: bing news
     engine: bing_news
     shortcut: bin
+    display_error_messages: false
 
   - name: bing videos
     engine: bing_videos
     shortcut: biv
+    display_error_messages: false
 
   - name: bitbucket
     engine: xpath
@@ -391,6 +405,7 @@ engines:
     timeout: 4.0
     disabled: true
     shortcut: bb
+    display_error_messages: false
     about:
       website: https://bitbucket.org/
       wikidata_id: Q2493781
@@ -398,10 +413,11 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
-
+   
   - name: btdigg
     engine: btdigg
     shortcut: bt
+    display_error_messages: false
 
   - name: ccc-tv
     engine: xpath
@@ -413,6 +429,7 @@ engines:
     categories: videos
     disabled: true
     shortcut: c3tv
+    display_error_messages: false
     about:
       website: https://media.ccc.de/
       wikidata_id: Q80729951
@@ -428,6 +445,7 @@ engines:
     engine: openverse
     categories: images
     shortcut: opv
+    display_error_messages: false
 
   # - name: core.ac.uk
   #   engine: core
@@ -441,6 +459,7 @@ engines:
     shortcut: cr
     timeout: 30
     disabled: true
+    display_error_messages: false
 
   - name: yep
     engine: json_engine
@@ -455,6 +474,7 @@ engines:
     title_query: title
     url_query: url
     content_query: snippet
+    display_error_messages: false
     about:
       website: https://yep.com
       use_official_api: false
@@ -474,6 +494,7 @@ engines:
     url_xpath: ./div[@class="title-and-desc"]/a/@href
     title_xpath: ./div[@class="title-and-desc"]/a/div
     content_xpath: ./div[@class="title-and-desc"]/div[@class="site-descr"]
+    display_error_messages: false
     about:
       website: https://curlie.org/
       wikidata_id: Q60715723
@@ -485,16 +506,19 @@ engines:
     engine: currency_convert
     categories: general
     shortcut: cc
+    display_error_messages: false
 
   - name: deezer
     engine: deezer
     shortcut: dz
     disabled: true
+    display_error_messages: false
 
   - name: deviantart
     engine: deviantart
     shortcut: da
     timeout: 3.0
+    display_error_messages: false
 
   - name: ddg definitions
     engine: duckduckgo_definitions
@@ -502,6 +526,7 @@ engines:
     weight: 2
     disabled: false
     tests: *tests_infobox
+    display_error_messages: false
 
   # cloudflare protected
   # - name: digbt
@@ -514,6 +539,7 @@ engines:
     engine: docker_hub
     shortcut: dh
     categories: [it, packages]
+    display_error_messages: false
 
   - name: erowid
     engine: xpath
@@ -527,6 +553,7 @@ engines:
     categories: []
     shortcut: ew
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.erowid.org/
       wikidata_id: Q1430691
@@ -567,29 +594,34 @@ engines:
     shortcut: ddi
     timeout: 3.0
     disabled: true
+    display_error_messages: false
 
   - name: duckduckgo weather
     engine: duckduckgo_weather
     shortcut: ddw
     disabled: true
+    display_error_messages: false
 
   - name: apple maps
     engine: apple_maps
     shortcut: apm
     disabled: true
     timeout: 5.0
+    display_error_messages: false
 
   - name: emojipedia
     engine: emojipedia
     timeout: 4.0
     shortcut: em
     disabled: true
+    display_error_messages: false
 
   - name: tineye
     engine: tineye
     shortcut: tin
     timeout: 9.0
     disabled: true
+    display_error_messages: false
 
   - name: etymonline
     engine: xpath
@@ -602,6 +634,7 @@ engines:
     shortcut: et
     categories: [dictionaries]
     disabled: false
+    display_error_messages: false
     about:
       website: https://www.etymonline.com/
       wikidata_id: Q1188617
@@ -622,11 +655,13 @@ engines:
     shortcut: 1x
     timeout: 3.0
     disabled: true
+    display_error_messages: false
 
   - name: fdroid
     engine: fdroid
     shortcut: fd
     disabled: true
+    display_error_messages: false
 
   - name: flickr
     categories: images
@@ -637,6 +672,7 @@ engines:
     # api_key: 'apikey' # required!
     # Or you can use the html non-stable engine, activated by default
     engine: flickr_noapi
+    display_error_messages: false
 
   - name: free software directory
     engine: mediawiki
@@ -651,6 +687,7 @@ engines:
     search_type: title
     timeout: 5.0
     disabled: true
+    display_error_messages: false
     about:
       website: https://directory.fsf.org/
       wikidata_id: Q2470288
@@ -667,22 +704,26 @@ engines:
     engine: frinkiac
     shortcut: frk
     disabled: true
+    display_error_messages: false
 
   - name: genius
     engine: genius
     shortcut: gen
+    display_error_messages: false
 
   - name: gigablast
     engine: gigablast
     shortcut: gb
     timeout: 4.0
     disabled: true
+    display_error_messages: false
     additional_tests:
       rosebud: *test_rosebud
 
   - name: gentoo
     engine: gentoo
     shortcut: ge
+    display_error_messages: false
 
   - name: gitlab
     engine: json_engine
@@ -696,6 +737,7 @@ engines:
     shortcut: gl
     timeout: 10.0
     disabled: true
+    display_error_messages: false
     about:
       website: https://about.gitlab.com/
       wikidata_id: Q16639197
@@ -707,6 +749,7 @@ engines:
   - name: github
     engine: github
     shortcut: gh
+    display_error_messages: false
 
     # This a Gitea service. If you would like to use a different instance,
     # change codeberg.org to URL of the desired Gitea host. Or you can create a
@@ -721,6 +764,7 @@ engines:
     categories: [it, repos]
     shortcut: cb
     disabled: true
+    display_error_messages: false
     about:
       website: https://codeberg.org/
       wikidata_id:
@@ -734,6 +778,7 @@ engines:
     shortcut: go
     # see https://docs.searxng.org/src/searx.engines.google.html#module-searx.engines.google
     use_mobile_ui: false
+    display_error_messages: false
     # additional_tests:
     #   android: *test_android
 
@@ -751,6 +796,7 @@ engines:
   - name: google images
     engine: google_images
     shortcut: goi
+    display_error_messages: false
     # additional_tests:
     #   android: *test_android
     #   dali:
@@ -763,23 +809,27 @@ engines:
   - name: google news
     engine: google_news
     shortcut: gon
+    display_error_messages: false
     # additional_tests:
     #   android: *test_android
 
   - name: google videos
     engine: google_videos
     shortcut: gov
+    display_error_messages: false
     # additional_tests:
     #   android: *test_android
 
   - name: google scholar
     engine: google_scholar
     shortcut: gos
+    display_error_messages: false
 
   - name: google play apps
     engine: google_play_apps
     shortcut: gpa
     disabled: true
+    display_error_messages: false
 
   - name: google play movies
     engine: xpath
@@ -793,6 +843,7 @@ engines:
     categories: videos
     shortcut: gpm
     disabled: true
+    display_error_messages: false
     about:
       website: https://play.google.com/
       wikidata_id: Q79576
@@ -813,6 +864,7 @@ engines:
     page_size: 19
     categories: music
     disabled: true
+    display_error_messages: false
     about:
       website: https://gpodder.net
       wikidata_id: Q3093354
@@ -832,6 +884,7 @@ engines:
     timeout: 4.0
     disabled: true
     shortcut: habr
+    display_error_messages: false
     about:
       website: https://habr.com/
       wikidata_id: Q4494434
@@ -851,6 +904,7 @@ engines:
     page_size: 20
     categories: [it, packages]
     shortcut: ho
+    display_error_messages: false
     about:
       website: https://hoogle.haskell.org/
       wikidata_id: Q34010
@@ -864,12 +918,14 @@ engines:
     shortcut: imdb
     timeout: 6.0
     disabled: true
+    display_error_messages: false
 
   - name: ina
     engine: ina
     shortcut: in
     timeout: 6.0
     disabled: true
+    display_error_messages: false
 
   - name: invidious
     engine: invidious
@@ -884,18 +940,21 @@ engines:
     shortcut: iv
     timeout: 3.0
     disabled: true
+    display_error_messages: false
 
   - name: jisho
     engine: jisho
     shortcut: js
     timeout: 3.0
     disabled: true
+    display_error_messages: false
 
   - name: kickass
     engine: kickass
     shortcut: kc
     timeout: 4.0
     disabled: true
+    display_error_messages: false
 
   - name: library genesis
     engine: xpath
@@ -907,6 +966,7 @@ engines:
     timeout: 7.0
     disabled: true
     shortcut: lg
+    display_error_messages: false
     about:
       website: https://libgen.fun/
       wikidata_id: Q22017206
@@ -933,10 +993,12 @@ engines:
     engine: loc
     shortcut: loc
     categories: images
+    display_error_messages: false
 
   - name: lingva
     engine: lingva
     shortcut: lv
+    display_error_messages: false
     # set lingva instance in url, by default it will use the official instance
     # url: https://lingva.ml
 
@@ -951,6 +1013,7 @@ engines:
     shortcut: lo
     timeout: 5.0
     disabled: true
+    display_error_messages: false
     about:
       website: https://lobste.rs/
       wikidata_id: Q60762874
@@ -970,6 +1033,7 @@ engines:
     url_xpath: //td[@class="text-left visitedlyr"]/a/@href
     title_xpath: //span/b/text()
     content_xpath: //td[@class="text-left visitedlyr"]/a/small
+    display_error_messages: false
     about:
       website: https://azlyrics.com
       wikidata_id: Q66372542
@@ -983,6 +1047,7 @@ engines:
     shortcut: cpan
     disabled: true
     number_of_results: 20
+    display_error_messages: false
 
   # - name: meilisearch
   #   engine: meilisearch
@@ -994,6 +1059,7 @@ engines:
   - name: mixcloud
     engine: mixcloud
     shortcut: mc
+    display_error_messages: false
 
   # MongoDB engine
   # Required dependency: pymongo
@@ -1023,6 +1089,7 @@ engines:
     disabled: true
     timeout: 5.0
     shortcut: npm
+    display_error_messages: false
     about:
       website: https://npms.io/
       wikidata_id: Q7067518
@@ -1035,6 +1102,7 @@ engines:
     engine: nyaa
     shortcut: nt
     disabled: true
+    display_error_messages: false
 
   - name: mankier
     engine: json_engine
@@ -1045,6 +1113,7 @@ engines:
     content_query: description
     categories: it
     shortcut: man
+    display_error_messages: false
     about:
       website: https://www.mankier.com/
       official_api_documentation: https://www.mankier.com/api
@@ -1064,6 +1133,7 @@ engines:
     categories: "science"
     shortcut: oad
     timeout: 5.0
+    display_error_messages: false
     about:
       website: https://www.openaire.eu/
       wikidata_id: Q25106053
@@ -1084,6 +1154,7 @@ engines:
     categories: science
     shortcut: oap
     timeout: 5.0
+    display_error_messages: false
     about:
       website: https://www.openaire.eu/
       wikidata_id: Q25106053
@@ -1100,6 +1171,7 @@ engines:
   - name: openstreetmap
     engine: openstreetmap
     shortcut: osm
+    display_error_messages: false
 
   - name: openrepos
     engine: xpath
@@ -1112,6 +1184,7 @@ engines:
     timeout: 4.0
     disabled: true
     shortcut: or
+    display_error_messages: false
     about:
       website: https://openrepos.net/
       wikidata_id:
@@ -1132,6 +1205,7 @@ engines:
     disabled: true
     timeout: 5.0
     shortcut: pack
+    display_error_messages: false
     about:
       website: https://packagist.org
       wikidata_id: Q108311377
@@ -1143,12 +1217,14 @@ engines:
   - name: pdbe
     engine: pdbe
     shortcut: pdb
+    display_error_messages: false
     # Hide obsolete PDB entries.  Default is not to hide obsolete structures
     #  hide_obsolete: false
 
   - name: photon
     engine: photon
     shortcut: ph
+    display_error_messages: false
 
   - name: piratebay
     engine: piratebay
@@ -1157,6 +1233,7 @@ engines:
     # country
     url: https://thepiratebay.org/
     timeout: 3.0
+    display_error_messages: false
 
   # Required dependency: psychopg2
   #  - name: postgresql
@@ -1181,6 +1258,7 @@ engines:
     timeout: 3.0
     disabled: true
     first_page_num: 1
+    display_error_messages: false
     about:
       website: https://pub.dev/
       official_api_documentation: https://pub.dev/help/api
@@ -1192,6 +1270,7 @@ engines:
     engine: pubmed
     shortcut: pub
     timeout: 3.0
+    display_error_messages: false
 
   - name: pypi
     shortcut: pypi
@@ -1205,6 +1284,7 @@ engines:
     suggestion_xpath: /html/body/main/div/div/div/form/div/div[@class="callout-block"]/p/span/a[@class="link"]
     first_page_num: 1
     categories: [it, packages]
+    display_error_messages: false
     about:
       website: https://pypi.org
       wikidata_id: Q2984686
@@ -1219,6 +1299,7 @@ engines:
     shortcut: qw
     categories: [general, web]
     disabled: false
+    display_error_messages: false
     additional_tests:
       rosebud: *test_rosebud
 
@@ -1229,6 +1310,7 @@ engines:
     categories: news
     disabled: false
     network: qwant
+    display_error_messages: false
 
   - name: qwant images
     qwant_categ: images
@@ -1237,6 +1319,7 @@ engines:
     categories: [images, web]
     disabled: false
     network: qwant
+    display_error_messages: false
 
   - name: qwant videos
     qwant_categ: videos
@@ -1245,6 +1328,7 @@ engines:
     categories: [videos, web]
     disabled: false
     network: qwant
+    display_error_messages: false
 
   # - name: library
   #   engine: recoll
@@ -1272,6 +1356,7 @@ engines:
     engine: reddit
     shortcut: re
     page_size: 25
+    display_error_messages: false
 
   # Required dependency: redis
   # - name: myredis
@@ -1293,38 +1378,45 @@ engines:
   - name: sepiasearch
     engine: sepiasearch
     shortcut: sep
+    display_error_messages: false
 
   - name: soundcloud
     engine: soundcloud
     shortcut: sc
+    display_error_messages: false
 
   - name: stackoverflow
     engine: stackexchange
     shortcut: st
     api_site: 'stackoverflow'
     categories: [it, q&a]
+    display_error_messages: false
 
   - name: askubuntu
     engine: stackexchange
     shortcut: ubuntu
     api_site: 'askubuntu'
     categories: [it, q&a]
+    display_error_messages: false
 
   - name: superuser
     engine: stackexchange
     shortcut: su
     api_site: 'superuser'
     categories: [it, q&a]
+    display_error_messages: false
 
   - name: searchcode code
     engine: searchcode_code
     shortcut: scc
     disabled: true
+    display_error_messages: false
 
   - name: framalibre
     engine: framalibre
     shortcut: frl
     disabled: true
+    display_error_messages: false
 
   # - name: searx
   #   engine: searx_engine
@@ -1338,6 +1430,7 @@ engines:
     engine: semantic_scholar
     disabled: true
     shortcut: se
+    display_error_messages: false
 
   # Spotify needs API credentials
   # - name: spotify
@@ -1370,6 +1463,7 @@ engines:
     shortcut: sp
     timeout: 6.0
     disabled: true
+    display_error_messages: false
     additional_tests:
       rosebud: *test_rosebud
 
@@ -1378,12 +1472,14 @@ engines:
     shortcut: tt
     timeout: 6.0
     disabled: true
+    display_error_messages: false
 
   - name: solidtorrents
     engine: solidtorrents
     shortcut: solid
     timeout: 4.0
     disabled: false
+    display_error_messages: false
     base_url:
       - https://solidtorrents.net
       - https://solidtorrents.eu
@@ -1423,6 +1519,7 @@ engines:
     categories: onions
     enable_http: true
     shortcut: tch
+    display_error_messages: false
 
   # torznab engine lets you query any torznab compatible indexer.  Using this
   # engine in combination with Jackett (https://github.com/Jackett/Jackett)
@@ -1464,15 +1561,18 @@ engines:
   - name: unsplash
     engine: unsplash
     shortcut: us
+    display_error_messages: false
 
   - name: yahoo
     engine: yahoo
     shortcut: yh
     disabled: false
+    display_error_messages: false
 
   - name: yahoo news
     engine: yahoo_news
     shortcut: yhn
+    display_error_messages: false
 
   - name: youtube
     shortcut: yt
@@ -1484,14 +1584,17 @@ engines:
     #
     # Or you can use the html non-stable engine, activated by default
     engine: youtube_noapi
+    display_error_messages: false
 
   - name: dailymotion
     engine: dailymotion
     shortcut: dm
+    display_error_messages: false
 
   - name: vimeo
     engine: vimeo
     shortcut: vm
+    display_error_messages: false
 
   - name: wiby
     engine: json_engine
@@ -1503,6 +1606,7 @@ engines:
     categories: [general, web]
     shortcut: wib
     disabled: true
+    display_error_messages: false
     about:
       website: https://wiby.me/
 
@@ -1520,6 +1624,7 @@ engines:
     content_query: description
     timeout: 1.5
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.marginalia.nu/
       official_api_documentation: https://api.marginalia.nu/
@@ -1539,6 +1644,7 @@ engines:
     content_query: snippet
     timeout: 1.5
     disabled: true
+    display_error_messages: false
     about:
       website: https://alexandria.org/
       official_api_documentation: https://github.com/alexandria-org/alexandria-api/raw/master/README.md
@@ -1554,6 +1660,7 @@ engines:
     number_of_results: 5
     search_type: text
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.wikibooks.org/
       wikidata_id: Q367
@@ -1566,6 +1673,7 @@ engines:
     number_of_results: 5
     search_type: text
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.wikinews.org/
       wikidata_id: Q964
@@ -1578,6 +1686,7 @@ engines:
     number_of_results: 5
     search_type: text
     disabled: true
+    display_error_messages: false
     additional_tests:
       rosebud: *test_rosebud
     about:
@@ -1592,6 +1701,7 @@ engines:
     number_of_results: 5
     search_type: text
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.wikisource.org/
       wikidata_id: Q263
@@ -1604,6 +1714,7 @@ engines:
     number_of_results: 5
     search_type: text
     disabled: false
+    display_error_messages: false
     about:
       website: https://www.wiktionary.org/
       wikidata_id: Q151
@@ -1616,6 +1727,7 @@ engines:
     number_of_results: 5
     search_type: text
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.wikiversity.org/
       wikidata_id: Q370
@@ -1628,6 +1740,7 @@ engines:
     number_of_results: 5
     search_type: text
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.wikivoyage.org/
       wikidata_id: Q373
@@ -1644,16 +1757,19 @@ engines:
     engine: wolframalpha_noapi
     timeout: 6.0
     categories: []
+    display_error_messages: false
 
   - name: dictzone
     engine: dictzone
     shortcut: dc
+    display_error_messages: false
 
   - name: mymemory translated
     engine: translated
     shortcut: tl
     timeout: 5.0
     disabled: false
+    display_error_messages: false
     # You can use without an API key, but you are limited to 1000 words/day
     # See: https://mymemory.translated.net/doc/usagelimits.php
     # api_key: ''
@@ -1672,16 +1788,19 @@ engines:
     engine: 1337x
     shortcut: 1337x
     disabled: true
+    display_error_messages: false
 
   - name: duden
     engine: duden
     shortcut: du
     disabled: true
+    display_error_messages: false
 
   - name: seznam
     shortcut: szn
     engine: seznam
     disabled: true
+    display_error_messages: false
 
   # - name: deepl
   #   engine: deepl
@@ -1706,6 +1825,7 @@ engines:
     first_page_num: 0
     page_size: 10
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.mojeek.com/
       wikidata_id: Q60747299
@@ -1726,6 +1846,7 @@ engines:
     first_page_num: 1
     page_size: 10
     disabled: true
+    display_error_messages: false
     about:
       website: https://www.naver.com/
       wikidata_id: Q485639
@@ -1748,6 +1869,7 @@ engines:
     first_page_num: 1
     categories: [it, packages]
     disabled: true
+    display_error_messages: false
     about:
       website: https://rubygems.org/
       wikidata_id: Q1853420
@@ -1765,12 +1887,14 @@ engines:
     # base_url: https://tube.tardis.world/
     categories: videos
     disabled: false
+    display_error_messages: false
     timeout: 6.0
 
   - name: mediathekviewweb
     engine: mediathekviewweb
     shortcut: mvw
     disabled: true
+    display_error_messages: false
 
   # - name: yacy
   #   engine: yacy
@@ -1788,6 +1912,7 @@ engines:
     paging: true
     categories: videos
     disabled: false
+    display_error_messages: false
 
   - name: wordnik
     engine: wordnik
@@ -1796,6 +1921,7 @@ engines:
     categories: [dictionaries]
     timeout: 5.0
     disabled: false
+    display_error_messages: false
 
   - name: woxikon.de synonyme
     engine: xpath
@@ -1803,6 +1929,7 @@ engines:
     categories: [dictionaries]
     timeout: 5.0
     disabled: true
+    display_error_messages: false
     search_url: https://synonyme.woxikon.de/synonyme/{query}.php
     url_xpath: //div[@class="upper-synonyms"]/a/@href
     content_xpath: //div[@class="synonyms-list-group"]
@@ -1822,6 +1949,7 @@ engines:
     base_url: https://sjp.pwn.pl/
     timeout: 5.0
     disabled: true
+    display_error_messages: false
 
     # wikimini: online encyclopedia for children
     # The fulltext and title parameter is necessary for Wikimini because
@@ -1835,6 +1963,7 @@ engines:
     content_xpath: //li/div[@class="searchresult"]
     categories: general
     disabled: true
+    display_error_messages: false
     about:
       website: https://wikimini.org/
       wikidata_id: Q3568032
@@ -1847,6 +1976,7 @@ engines:
     engine: wttr
     shortcut: wttr
     timeout: 9.0
+    display_error_messages: false
 
   - name: brave
     shortcut: brave
@@ -1867,6 +1997,7 @@ engines:
       year: 'py'
     categories: [general, web]
     disabled: false
+    display_error_messages: false
     headers:
       Accept-Encoding: gzip, deflate
     about:
@@ -1886,6 +2017,7 @@ engines:
     content_xpath: //div[@class='webpage-text']
     first_page_num: 1
     disabled: true
+    display_error_messages: false
     headers:
       User-Agent: Mozilla/5.0 (Linux; Android 7.0;) \
         AppleWebKit/537.36 (KHTML, like Gecko) \
@@ -1902,6 +2034,7 @@ engines:
     shortcut: ptsi
     disabled: true
     timeout: 3.0
+    display_error_messages: false
 
   - name: lib.rs
     shortcut: lrs
@@ -1913,6 +2046,7 @@ engines:
     content_xpath: ./div[@class="h"]/p
     categories: [it, packages]
     disabled: true
+    display_error_messages: false
     about:
       website: https://lib.rs
       wikidata_id: Q113486010
@@ -1932,6 +2066,7 @@ engines:
     first_page_num: 1
     categories: [it, repos]
     disabled: true
+    display_error_messages: false
     about:
       website: https://sr.ht
       wikidata_id: Q78514485
@@ -1952,6 +2087,7 @@ engines:
     categories: [general, web]
     disabled: true
     timeout: 4.0
+    display_error_messages: false
     about:
       website: https://search.goo.ne.jp
       wikidata_id: Q249044
