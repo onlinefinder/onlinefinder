@@ -27,8 +27,7 @@ preferences options.
 - OnlineFinder is a free metasearch engine.
 
 If you do care about privacy, want to be a conscious user, or otherwise believe
-in digital freedom, make OnlineFinder your default search engine or run it on your
-own server!
+in digital freedom, make OnlineFinder your default search engine.
 
 ## How do I set it as the default search engine?
 
@@ -46,8 +45,7 @@ search engine, see your browser's documentation:
 
 OnlineFinder was established in 1996 as one of the very first search portals on the 
 internet. Nowadays, we compile a vast amount of the search engines under one page, 
-free for you to use. OnlineFinder is currently a fork of SearXNG. You can turn on or off any 
-search engine to scan in the preferences for your searches.
+free for you to use. You can turn on or off any search engine to scan in the preferences for your searches.
 
 100% Private searches! Tons of search engines all under one search page! Easy to use!
 
