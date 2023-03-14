@@ -26,10 +26,9 @@ preferences options.
 - We never share anything with a third-party, and it can't be used to compromise you.
 - OnlineFinder is a free metasearch engine.
 
-If you do care about privacy, want to be a conscious user, or otherwise believe
-in digital freedom, make OnlineFinder your default search engine.
+If you do care about privacy, want to be a conscious user, or otherwise believe in digital freedom, make OnlineFinder your default search engine. OnlineFinder supports [OpenSearch].  For more information on changing your default search engine, see your browser documentation.
 
-## Set OnlineFinder as your default search engine on Chrome & Brave.
+## Set OnlineFinder as your default search engine on Chrome & Brave:
 
 - Navigate to the top right corner of your browser, click the three stacked bars button and choose "Settings".
 - Under "Search engine" click the button "Manage search engines and site search".
@@ -43,16 +42,11 @@ in digital freedom, make OnlineFinder your default search engine.
 Now when you type something in your browser, OnlineFinder will be your default search engine. Also when you highlight something and click search, OnlineFinder will be the default for your search. 
 ENJOY!
 
-## How do I set it as the default search engine?
-
-OnlineFinder supports [OpenSearch].  For more information on changing your default
-search engine, see your browser's documentation:
+## How do I set it as the default for Microsoft Edge & Firefox?
 
 - [Firefox]
 - [Microsoft Edge] - Behind the link, you will also find some useful instructions
   for Chrome and Safari.
-- [Chromium]-based browsers only add websites that the user navigates to without
-  a path.
 
 
 ## History of OnlineFinder
