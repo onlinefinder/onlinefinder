@@ -30,15 +30,16 @@ If you do care about privacy, want to be a conscious user, or otherwise believe
 in digital freedom, make OnlineFinder your default search engine.
 
 ## Set OnlineFinder as your default search engine on Chrome & Brave.
--Navigate to the top right corner of your browser, click the three stacked bars button and choose "Settings".
--Under "Search engine" click the button "Manage search engines and site search".
--Click on "ADD".
--For SEARCH ENGINE, enter "OnlineFinder" (without quotes).
--For SHORCUT, enter ":of" (without quotes).
--For "URL with %s in place of query" enter "https://onlinefinder.com/search?q=%s" (without quotes).
--Click SAVE.
--OnlineFinder will then be listed in your choice of search engines.
---Click the tripple dots to the right of OnlineFinder and select "Make Default".
+
+- Navigate to the top right corner of your browser, click the three stacked bars button and choose "Settings".
+- Under "Search engine" click the button "Manage search engines and site search".
+- Click on "ADD".
+- For SEARCH ENGINE, enter "OnlineFinder" (without quotes).
+- For SHORCUT, enter ":of" (without quotes).
+- For "URL with %s in place of query" enter "https://onlinefinder.com/search?q=%s" (without quotes).
+- Click SAVE.
+- OnlineFinder will then be listed in your choice of search engines. Click the tripple dots to the right of OnlineFinder and select "Make Default".
+
 Now when you type something in your browser, OnlineFinder will be your default search engine. Also when you highlight something and click search, OnlineFinder will be the default for your search. 
 ENJOY!
 
