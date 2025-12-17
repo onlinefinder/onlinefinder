@@ -1,37 +1,6 @@
-{
-	admin off
-
-	log {
-		output stderr
-		format filter {
-			# Preserves first 8 bits from IPv4 and 32 bits from IPv6
-			request>remote_ip ip_mask 8 32
-			request>client_ip ip_mask 8 32
-
-			# Remove identificable information
-			request>remote_port delete
-			request>headers delete
-			request>uri query {
-				delete url
-				delete h
-				delete q
-			}
-		}
-	}
-
-	servers {
-		client_ip_headers X-Forwarded-For X-Real-IP
-
-		# Allow the following IP to passthrough the "X-Forwarded-*" headers to SearXNG
-		# https://caddyserver.com/docs/caddyfile/options#trusted-proxies
-		trusted_proxies static private_ranges
-		trusted_proxies_strict
-	}
-}
-
 {$SEARXNG_HOSTNAME}
 
-tls {$SEARXNG_TLS}
+tls {$LETSENCRYPT_EMAIL}
 
 encode zstd gzip
 
