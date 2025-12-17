@@ -61,7 +61,7 @@ test.shell:
 		utils/lib_nvm.sh \
 		utils/lib_redis.sh \
 		utils/lib_valkey.sh \
-		utils/searxng.sh
+		utils/onlinefinder.sh
 	$(Q)$(MTOOLS) build_msg TEST "$@ OK"
 
 PHONY += format

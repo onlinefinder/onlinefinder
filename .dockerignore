@@ -1,5 +1,12 @@
 *
 
 !container/entrypoint.sh
-!searx/**
+!container/**
+!olf/**
+!onlinefinder_extra/**
+!setup.py
 !requirements*.txt
+!README.rst
+!LICENSE
+!MANIFEST.in
+!babel.cfg

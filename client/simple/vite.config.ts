@@ -120,12 +120,12 @@ export default {
     // SearXNG brand (static)
     plg_svg2png([
       {
-        src: `${PATH.brand}/searxng-wordmark.svg`,
+        src: `${PATH.brand}/onlinefinder-wordmark.svg`,
         dest: `${PATH.dist}/img/favicon.png`
       },
       {
-        src: `${PATH.brand}/searxng.svg`,
-        dest: `${PATH.dist}/img/searxng.png`
+        src: `${PATH.brand}/onlinefinder.svg`,
+        dest: `${PATH.dist}/img/onlinefinder.png`
       }
     ]),
 
@@ -133,8 +133,8 @@ export default {
     plg_svg2svg(
       [
         {
-          src: `${PATH.brand}/searxng.svg`,
-          dest: `${PATH.dist}/img/searxng.svg`
+          src: `${PATH.brand}/onlinefinder.svg`,
+          dest: `${PATH.dist}/img/onlinefinder.svg`
         },
         {
           src: `${PATH.brand}/img_load_error.svg`,
@@ -148,7 +148,7 @@ export default {
     plg_svg2svg(
       [
         {
-          src: `${PATH.brand}/searxng-wordmark.svg`,
+          src: `${PATH.brand}/onlinefinder-wordmark.svg`,
           dest: `${PATH.dist}/img/favicon.svg`
         }
       ],
@@ -159,8 +159,8 @@ export default {
     plg_svg2svg(
       [
         {
-          src: `${PATH.brand}/searxng-wordmark.svg`,
-          dest: `${PATH.templates}/searxng-wordmark.min.svg`
+          src: `${PATH.brand}/onlinefinder-wordmark.svg`,
+          dest: `${PATH.templates}/onlinefinder-wordmark.min.svg`
         }
       ],
       svg2svg_opts

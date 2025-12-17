@@ -51,7 +51,7 @@ PY_SETUP_EXTRAS='[test]'
 GECKODRIVER_VERSION="v0.36.0"
 # SPHINXOPTS=
 BLACK_OPTIONS=("--target-version" "py311" "--line-length" "120" "--skip-string-normalization")
-BLACK_TARGETS=("--exclude" "(searx/static|searx/languages.py)" "--include" 'searxng.msg|\.pyi?$' "searx" "searxng_extra" "tests")
+BLACK_TARGETS=("--exclude" "(searx/static|searx/languages.py)" "--include" 'onlinefinder.msg|\.pyi?$' "searx" "onlinefinder_extra" "tests")
 
 YAMLLINT_FILES=()
 while IFS= read -r line; do
@@ -274,8 +274,8 @@ docs.prebuild() {
         set -e
         [ "$VERBOSE" = "1" ] && set -x
         mkdir -p "${DOCS_BUILD}/includes"
-        ./utils/searxng.sh searxng.doc.rst >"${DOCS_BUILD}/includes/searxng.rst"
-        pyenv.cmd searxng_extra/docs_prebuild
+        ./utils/onlinefinder.sh onlinefinder.doc.rst >"${DOCS_BUILD}/includes/onlinefinder.rst"
+        pyenv.cmd onlinefinder_extra/docs_prebuild
     )
     dump_return $?
 }
