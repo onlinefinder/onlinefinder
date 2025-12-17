@@ -1,119 +1,128 @@
-# searxng-docker
+# 🔍 OnlineFinder
 
-Create a new SearXNG instance in five minutes using Docker
+**A privacy-respecting metasearch engine** - Forked from SearXNG
 
-## What is included?
+OnlineFinder aggregates results from multiple search engines while protecting your privacy. No tracking, no profiling, just search results.
 
-| Name                                          | Description                                                    | Docker image                                                                 | Dockerfile                                                                                                                                                                                    |
-|-----------------------------------------------|----------------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Caddy](https://github.com/caddyserver/caddy) | Reverse proxy (create a LetsEncrypt certificate automatically) | [docker.io/library/caddy:2-alpine](https://hub.docker.com/_/caddy)           | [Dockerfile](https://github.com/caddyserver/caddy-docker/blob/master/Dockerfile.tmpl)                                                                                                         |
-| [SearXNG](https://github.com/searxng/searxng) | SearXNG by itself                                              | [docker.io/searxng/searxng:latest](https://hub.docker.com/r/searxng/searxng) | [builder.dockerfile](https://github.com/searxng/searxng/blob/master/container/builder.dockerfile) [dist.dockerfile](https://github.com/searxng/searxng/blob/master/container/dist.dockerfile) |
-| [Valkey](https://github.com/valkey-io/valkey) | In-memory database                                             | [docker.io/valkey/valkey:8-alpine](https://hub.docker.com/r/valkey/valkey)   | [Dockerfile](https://github.com/valkey-io/valkey-container/blob/mainline/Dockerfile.template)                                                                                                 |
+---
 
-## How to use it
+## 🚀 Quick Start
 
-There are two ways to host SearXNG. The first one doesn't require any prior knowledge about self-hosting and thus is
-recommended for beginners. It includes caddy as a reverse proxy and automatically deals with the TLS certificates for
-you. The second one is recommended for more advanced users that already have their own reverse proxy (e.g. Nginx,
-HAProxy, ...) and probably some other services running on their machine. The first few steps are the same for both
-installation methods however.
+### Prerequisites
+- Docker and Docker Compose installed
+- Port 8888 available
 
-1. [Install docker](https://docs.docker.com/install/)
-2. Get searxng-docker
+### Launch
 
-```shell
-cd /usr/local
-git clone https://github.com/searxng/searxng-docker.git
-cd searxng-docker
+```bash
+# Make the start script executable
+chmod +x start.sh
+
+# Start OnlineFinder
+./start.sh
 ```
 
-3. Edit the [.env](https://github.com/searxng/searxng-docker/blob/master/.env) file to set the hostname and an email
-4. Generate the secret key `sed -i "s|ultrasecretkey|$(openssl rand -hex 32)|g" searxng/settings.yml`  
-   On a Mac: `sed -i '' "s|ultrasecretkey|$(openssl rand -hex 32)|g" searxng/settings.yml`
-5. Edit [searxng/settings.yml](https://github.com/searxng/searxng-docker/blob/master/searxng/settings.yml) according to
-   your needs
+Or manually:
 
-> [!NOTE]
-> Windows users can use the following powershell script to generate the secret key:
-> ```powershell
-> $randomBytes = New-Object byte[] 32
-> (New-Object Security.Cryptography.RNGCryptoServiceProvider).GetBytes($randomBytes)
-> $secretKey = -join ($randomBytes | ForEach-Object { "{0:x2}" -f $_ })
-> (Get-Content searxng/settings.yml) -replace 'ultrasecretkey', $secretKey | Set-Content searxng/settings.yml
-> ```
-
-### Method 1: With Caddy included (recommended for beginners)
-
-6. Run SearXNG in the background: `docker compose up -d`
-
-### Method 2: Bring your own reverse proxy (experienced users)
-
-6. Remove the caddy related parts in `docker-compose.yaml` such as the caddy service and its volumes.
-7. Point your reverse proxy to the port set for the `searxng` service in `docker-compose.yml` (8080 by default).
-8. Generate and configure the required TLS certificates with the reverse proxy of your choice.
-9. Run SearXNG in the background: `docker compose up -d`
-
-> [!NOTE]
-> You can change the port `searxng` listens on inside the docker container (e.g. if you want to operate in `host`
-> network mode) with the `BIND_ADDRESS` environment variable (defaults to `[::]:8080`). The environment variable can be
-> set directly inside `docker-compose.yaml`.
-
-## Troubleshooting - How to access the logs
-
-To access the logs from all the containers use: `docker compose logs -f`.
-
-To access the logs of one specific container:
-
-- Caddy: `docker compose logs -f caddy`
-- SearXNG: `docker compose logs -f searxng`
-- Valkey: `docker compose logs -f redis`
-
-### Start SearXNG with systemd
-
-You can skip this step if you don't use systemd.
-
-1. Copy the service template file:
-   ```sh
-   cp searxng-docker.service.template searxng-docker.service
-   ```
-
-2. Edit the content of ```WorkingDirectory``` in the ```searxng-docker.service``` file (only if the installation path is
-   different from ```/usr/local/searxng-docker```)
-
-3. Enable the service:
-   ```sh
-   systemctl enable $(pwd)/searxng-docker.service
-   ```
-
-4. Start the service:
-   ```sh
-   systemctl start searxng-docker.service
-   ```
-
-**Note:** Ensure the service file path matches your installation directory before enabling it.
-
-## Multi Architecture Docker images
-
-Supported architecture:
-
-- amd64
-- arm64
-- arm/v7
-
-## How to update ?
-
-To update the SearXNG stack:
-
-```sh
-git pull
-docker compose pull
-docker compose up -d
+```bash
+sudo docker-compose up -d
 ```
 
-Or the old way (with the old docker-compose version):
+### Access
+Open your browser and navigate to: **http://localhost:8888**
 
-```sh
-git pull
-docker-compose pull
-docker-compose up -d
+---
+
+## 📁 Project Structure
+
 ```
+onlinefinder.com/
+├── docker-compose.yaml      # Docker services configuration
+├── start.sh                 # Launch script
+├── README.md                # This file
+├── searxng/                 # Configuration files
+│   ├── settings.yml         # Main configuration
+│   └── limiter.toml         # Rate limiting configuration
+├── searxng-source/          # Rebranded source code
+│   └── olf/                 # OnlineFinder module (renamed from searx)
+│       ├── templates/       # HTML templates with OnlineFinder branding
+│       ├── static/          # Static files (CSS, JS, images)
+│       ├── infopage/        # About page content
+│       └── settings.yml     # Default settings
+└── logos/                   # OnlineFinder logo files
+    ├── onlinefinder-logo.svg
+    ├── onlinefinder-logo.png
+    └── onlinefinder-wordmark.svg
+```
+
+---
+
+## ⚙️ Configuration
+
+### Main Settings (`searxng/settings.yml`)
+
+| Setting | Description |
+|---------|-------------|
+| `general.instance_name` | Display name (OnlineFinder) |
+| `search.autocomplete` | Autocomplete backend |
+| `search.safe_search` | Safe search level (0=off, 1=moderate, 2=strict) |
+| `server.image_proxy` | Proxy images through OnlineFinder |
+| `ui.default_theme` | Theme (simple) |
+
+### Branding Settings
+
+| Setting | Value |
+|---------|-------|
+| `brand.docs_url` | https://docs.onlinefinder.com/ |
+| `brand.issue_url` | https://github.com/onlinefinder/onlinefinder/issues |
+| `brand.wiki_url` | https://github.com/onlinefinder/onlinefinder/wiki |
+
+---
+
+## 🎨 Branding Changes
+
+This fork includes the following rebranding from SearXNG:
+
+- **Name**: SearXNG → OnlineFinder
+- **Module**: `searx` → `olf`
+- **URLs**: searxng.org → onlinefinder.com
+- **GitHub**: github.com/searxng → github.com/onlinefinder
+- **Matrix**: #searxng:matrix.org → #onlinefinder:matrix.org
+- **Logo**: Custom OnlineFinder magnifying glass logo
+- **About Page**: Fully rebranded content
+
+---
+
+## 🔧 Useful Commands
+
+```bash
+# View logs
+sudo docker-compose logs -f
+
+# Stop OnlineFinder
+sudo docker-compose down
+
+# Restart OnlineFinder
+sudo docker-compose restart
+
+# Check container status
+sudo docker-compose ps
+```
+
+---
+
+## 📝 License
+
+This project is licensed under the AGPL-3.0 License - see the [LICENSE](searxng-source/LICENSE) file for details.
+
+Based on [SearXNG](https://github.com/searxng/searxng) - a privacy-respecting metasearch engine.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+- **GitHub**: https://github.com/onlinefinder/onlinefinder
+- **Matrix**: [#onlinefinder:matrix.org](https://matrix.to/#/#onlinefinder:matrix.org)
+- **Documentation**: https://docs.onlinefinder.com/

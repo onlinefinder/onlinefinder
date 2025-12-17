@@ -1,0 +1,81 @@
+/* OnlineFinder Custom Branding CSS */
+/* Copy this file to searxng/ folder with: sudo cp custom-branding.css searxng/ */
+
+/* Hide the default SearXNG text logo */
+.searxng-navbar .instance-name,
+#main-logo,
+.logo {
+    display: none !important;
+}
+
+/* Add OnlineFinder branding via CSS */
+#search::before {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 70px;
+    margin: 0 auto 30px auto;
+    background-image: url('/static/themes/simple/img/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* If logo doesn't load, show text */
+#search .search-container::before {
+    content: "OnlineFinder";
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #00d4aa 0%, #0099cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Style the search button with OnlineFinder colors */
+#search_button,
+.search-button,
+button[type="submit"] {
+    background: linear-gradient(135deg, #00d4aa 0%, #0099cc 100%) !important;
+    border: none !important;
+    color: white !important;
+}
+
+#search_button:hover,
+.search-button:hover,
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #0099cc 0%, #00d4aa 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 212, 170, 0.3);
+}
+
+/* Update link colors */
+a {
+    color: #0099cc;
+}
+
+a:hover {
+    color: #00d4aa;
+}
+
+/* Footer branding update */
+footer .footer-content::before {
+    content: "Powered by OnlineFinder";
+}
+
+/* Hide "Powered by SearXNG" text */
+footer [href*="searxng"] {
+    visibility: hidden;
+    position: relative;
+}
+
+footer [href*="searxng"]::after {
+    content: "OnlineFinder";
+    visibility: visible;
+    position: absolute;
+    left: 0;
+}
+

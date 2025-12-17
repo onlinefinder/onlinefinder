@@ -1,50 +1,63 @@
-services:
-  caddy:
-    container_name: caddy
-    image: docker.io/library/caddy:2-alpine
-    network_mode: host
-    restart: unless-stopped
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data:rw
-      - caddy-config:/config:rw
-    environment:
-      - SEARXNG_HOSTNAME=${SEARXNG_HOSTNAME:-http://localhost}
-      - SEARXNG_TLS=${LETSENCRYPT_EMAIL:-internal}
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
+# OnlineFinder Docker Compose Configuration
+# A privacy-respecting metasearch engine (forked from SearXNG)
 
+services:
   redis:
-    container_name: redis
+    container_name: onlinefinder-redis
     image: docker.io/valkey/valkey:8-alpine
     command: valkey-server --save 30 1 --loglevel warning
     restart: unless-stopped
     networks:
-      - searxng
+      - onlinefinder
     volumes:
-      - valkey-data2:/data
+      - valkey-data:/data
+    cap_drop:
+      - ALL
+    cap_add:
+      - SETGID
+      - SETUID
+      - DAC_OVERRIDE
     logging:
       driver: "json-file"
       options:
         max-size: "1m"
         max-file: "1"
 
-  searxng:
-    container_name: searxng
+  onlinefinder:
+    container_name: onlinefinder
     image: docker.io/searxng/searxng:latest
     restart: unless-stopped
     networks:
-      - searxng
+      - onlinefinder
     ports:
-      - "127.0.0.1:8080:8080"
+      - "8888:8080"
     volumes:
+      # Main config
       - ./searxng:/etc/searxng:rw
-      - searxng-data:/var/cache/searxng:rw
+      # Override images with OnlineFinder logos
+      - ./searxng-source/olf/static/themes/simple/img/onlinefinder.svg:/usr/local/searxng/searx/static/themes/simple/img/searxng.svg:ro
+      - ./searxng-source/olf/static/themes/simple/img/onlinefinder.png:/usr/local/searxng/searx/static/themes/simple/img/searxng.png:ro
+      # Override templates with OnlineFinder branding
+      - ./searxng-source/olf/templates/simple/base.html:/usr/local/searxng/searx/templates/simple/base.html:ro
+      - ./searxng-source/olf/templates/simple/index.html:/usr/local/searxng/searx/templates/simple/index.html:ro
+      - ./searxng-source/olf/templates/simple/info.html:/usr/local/searxng/searx/templates/simple/info.html:ro
+      - ./searxng-source/olf/templates/simple/results.html:/usr/local/searxng/searx/templates/simple/results.html:ro
+      - ./searxng-source/olf/templates/simple/new_issue.html:/usr/local/searxng/searx/templates/simple/new_issue.html:ro
+      # Override infopage content
+      - ./searxng-source/olf/infopage/en/about.md:/usr/local/searxng/searx/infopage/en/about.md:ro
+      - ./searxng-source/olf/infopage/en/donate.md:/usr/local/searxng/searx/infopage/en/donate.md:ro
+      - ./searxng-source/olf/infopage/__init__.py:/usr/local/searxng/searx/infopage/__init__.py:ro
+      # Data volume
+      - onlinefinder-data:/var/cache/searxng:rw
     environment:
-      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
+      - SEARXNG_BASE_URL=http://localhost:8888/
+      - INSTANCE_NAME=OnlineFinder
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
     logging:
       driver: "json-file"
       options:
@@ -52,10 +65,8 @@ services:
         max-file: "1"
 
 networks:
-  searxng:
+  onlinefinder:
 
 volumes:
-  caddy-data:
-  caddy-config:
-  valkey-data2:
-  searxng-data:
+  valkey-data:
+  onlinefinder-data:

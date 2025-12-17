@@ -1,9 +1,53 @@
-# see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+# OnlineFinder Settings Configuration
+# A privacy-respecting metasearch engine
+
 use_default_settings: true
+
+general:
+  instance_name: "OnlineFinder"
+  privacypolicy_url: false
+  donation_url: /info/en/donate
+  contact_url: false
+  enable_metrics: true
+  debug: false
+
+brand:
+  new_issue_url: https://github.com/onlinefinder/onlinefinder/issues/new
+  docs_url: https://docs.onlinefinder.com/
+  public_instances: https://onlinefinder.com/instances
+  wiki_url: https://github.com/onlinefinder/onlinefinder/wiki
+  issue_url: https://github.com/onlinefinder/onlinefinder/issues
+
+search:
+  safe_search: 0
+  autocomplete: "google"
+  default_lang: "auto"
+  ban_time_on_fail: 5
+  max_ban_time_on_fail: 120
+
 server:
-  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: "ultrasecretkey"  # change this!
-  limiter: false  # enable this when running the instance for a public usage on the internet
+  secret_key: "6f59fe9b9fe39885ea561cd2eab1c3d86f3578b916b82308235705b162392c96"
+  limiter: false
   image_proxy: true
-redis:
-  url: redis://redis:6379/0
+  method: "POST"
+
+ui:
+  static_use_hash: true
+  default_locale: ""
+  query_in_title: true
+  infinite_scroll: true
+  center_alignment: false
+  default_theme: simple
+  theme_args:
+    simple_style: auto
+
+valkey:
+  url: valkey://onlinefinder-redis:6379/0
+
+outgoing:
+  request_timeout: 3.0
+  max_request_timeout: 10.0
+  useragent_suffix: ""
+  pool_connections: 100
+  pool_maxsize: 20
+  enable_http2: true
