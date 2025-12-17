@@ -14,16 +14,16 @@ cd "$(dirname "$0")"
 
 # Copy logo files
 echo "📁 Copying logo files..."
-sudo cp logos/onlinefinder-logo.svg searxng/logo.svg
-sudo cp logos/onlinefinder-logo.png searxng/logo.png
-sudo cp logos/onlinefinder-wordmark.svg searxng/wordmark.svg
+sudo cp logos/onlinefinder-logo.svg onlinefinder/logo.svg
+sudo cp logos/onlinefinder-logo.png onlinefinder/logo.png
+sudo cp logos/onlinefinder-wordmark.svg onlinefinder/wordmark.svg
 
 # Set permissions
 echo "🔐 Setting permissions..."
-sudo chmod 644 searxng/logo.svg
-sudo chmod 644 searxng/logo.png
-sudo chmod 644 searxng/wordmark.svg
-sudo chown 977:977 searxng/logo.svg searxng/logo.png searxng/wordmark.svg 2>/dev/null || true
+sudo chmod 644 onlinefinder/logo.svg
+sudo chmod 644 onlinefinder/logo.png
+sudo chmod 644 onlinefinder/wordmark.svg
+sudo chown 977:977 onlinefinder/logo.svg onlinefinder/logo.png onlinefinder/wordmark.svg 2>/dev/null || true
 
 # Restart container to pick up changes
 echo "🔄 Restarting OnlineFinder..."

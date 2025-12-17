@@ -1,5 +1,5 @@
 /* OnlineFinder Custom Branding CSS */
-/* Copy this file to searxng/ folder with: sudo cp custom-branding.css searxng/ */
+/* Copy this file to onlinefinder/ folder with: sudo cp custom-branding.css onlinefinder/ */
 
 /* Hide the default SearXNG text logo */
 .searxng-navbar .instance-name,

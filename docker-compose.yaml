@@ -25,30 +25,36 @@ services:
 
   onlinefinder:
     container_name: onlinefinder
-    image: docker.io/searxng/searxng:latest
+    build:
+      context: ./onlinefinder-source
+      dockerfile: Dockerfile
     restart: unless-stopped
     networks:
       - onlinefinder
     volumes:
       # Main config
-      - ./searxng:/etc/searxng:rw
-      # Override images with OnlineFinder logos
-      - ./searxng-source/olf/static/themes/simple/img/onlinefinder.svg:/usr/local/searxng/searx/static/themes/simple/img/searxng.svg:ro
-      - ./searxng-source/olf/static/themes/simple/img/onlinefinder.png:/usr/local/searxng/searx/static/themes/simple/img/searxng.png:ro
-      # Override templates with OnlineFinder branding
-      - ./searxng-source/olf/templates/simple/base.html:/usr/local/searxng/searx/templates/simple/base.html:ro
-      - ./searxng-source/olf/templates/simple/index.html:/usr/local/searxng/searx/templates/simple/index.html:ro
-      - ./searxng-source/olf/templates/simple/info.html:/usr/local/searxng/searx/templates/simple/info.html:ro
-      - ./searxng-source/olf/templates/simple/results.html:/usr/local/searxng/searx/templates/simple/results.html:ro
-      - ./searxng-source/olf/templates/simple/new_issue.html:/usr/local/searxng/searx/templates/simple/new_issue.html:ro
-      # Override infopage content
-      - ./searxng-source/olf/infopage/en/about.md:/usr/local/searxng/searx/infopage/en/about.md:ro
-      - ./searxng-source/olf/infopage/en/donate.md:/usr/local/searxng/searx/infopage/en/donate.md:ro
-      - ./searxng-source/olf/infopage/__init__.py:/usr/local/searxng/searx/infopage/__init__.py:ro
+      - ./onlinefinder:/etc/onlinefinder:rw
+      # Override images with OnlineFinder logos (if needed)
+      - ./onlinefinder-source/olf/static/themes/simple/img/onlinefinder.svg:/usr/local/onlinefinder/olf/static/themes/simple/img/onlinefinder.svg:ro
+      - ./onlinefinder-source/olf/static/themes/simple/img/onlinefinder.png:/usr/local/onlinefinder/olf/static/themes/simple/img/onlinefinder.png:ro
+      # Override templates with OnlineFinder branding (if needed)
+      - ./onlinefinder-source/olf/templates/simple/base.html:/usr/local/onlinefinder/olf/templates/simple/base.html:ro
+      - ./onlinefinder-source/olf/templates/simple/index.html:/usr/local/onlinefinder/olf/templates/simple/index.html:ro
+      - ./onlinefinder-source/olf/templates/simple/info.html:/usr/local/onlinefinder/olf/templates/simple/info.html:ro
+      - ./onlinefinder-source/olf/templates/simple/results.html:/usr/local/onlinefinder/olf/templates/simple/results.html:ro
+      - ./onlinefinder-source/olf/templates/simple/new_issue.html:/usr/local/onlinefinder/olf/templates/simple/new_issue.html:ro
+      # Override infopage content (if needed)
+      - ./onlinefinder-source/olf/infopage/en/about.md:/usr/local/onlinefinder/olf/infopage/en/about.md:ro
+      - ./onlinefinder-source/olf/infopage/en/donate.md:/usr/local/onlinefinder/olf/infopage/en/donate.md:ro
+      - ./onlinefinder-source/olf/infopage/__init__.py:/usr/local/onlinefinder/olf/infopage/__init__.py:ro
       # Data volume
-      - onlinefinder-data:/var/cache/searxng:rw
+      - onlinefinder-data:/var/cache/onlinefinder:rw
     environment:
-      - SEARXNG_BASE_URL=https://onlinefinder.com/
+      # LOCAL DEVELOPMENT: Use localhost
+      - ONLINEFINDER_BASE_URL=http://localhost/
+      # PRODUCTION: Uncomment the line below and comment the line above
+      # - ONLINEFINDER_BASE_URL=https://onlinefinder.com/
+      - ONLINEFINDER_SETTINGS_PATH=/etc/onlinefinder/settings.yml
       - INSTANCE_NAME=OnlineFinder
     cap_drop:
       - ALL
@@ -77,8 +83,10 @@ services:
       - caddy-data:/data
       - caddy-config:/config
     environment:
-      - SEARXNG_HOSTNAME=onlinefinder.com
-      - SEARXNG_TLS=onlinefinder.com
+      # LOCAL DEVELOPMENT: Comment out domain configuration
+      # PRODUCTION: Uncomment these lines and uncomment the domain block in Caddyfile
+      # - ONLINEFINDER_HOSTNAME=onlinefinder.com
+      # - ONLINEFINDER_TLS=onlinefinder.com
       - LETSENCRYPT_EMAIL=accounts@southeastservers.com
     cap_drop:
       - ALL

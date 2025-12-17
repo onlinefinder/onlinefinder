@@ -15,9 +15,9 @@ cd "$(dirname "$0")"
 
 # Ensure proper permissions
 echo "📁 Setting file permissions..."
-chmod 644 searxng/settings.yml 2>/dev/null
-chmod 644 searxng/limiter.toml 2>/dev/null
-chmod 644 searxng/*.svg 2>/dev/null
+chmod 644 onlinefinder/settings.yml 2>/dev/null
+chmod 644 onlinefinder/limiter.toml 2>/dev/null
+chmod 644 onlinefinder/*.svg 2>/dev/null
 
 # Start containers (use docker-compose for compatibility)
 echo "🐳 Starting Docker containers..."
@@ -28,7 +28,7 @@ echo "✅ =================================="
 echo "   OnlineFinder is now running!"
 echo "================================== ✅"
 echo ""
-echo "🌐 Access it at: http://localhost:8888"
+echo "🌐 Access it at: http://localhost (or https://localhost if TLS is configured)"
 echo ""
 echo "📋 Useful commands:"
 echo "   View logs:    sudo docker-compose logs -f"

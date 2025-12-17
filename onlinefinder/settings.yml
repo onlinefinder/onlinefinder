@@ -26,6 +26,9 @@ search:
   max_ban_time_on_fail: 120
 
 server:
+  # Bind to all interfaces so Caddy can reach it from other containers
+  bind_address: "0.0.0.0"
+  port: 8080
   secret_key: "6f59fe9b9fe39885ea561cd2eab1c3d86f3578b916b82308235705b162392c96"
   limiter: false
   image_proxy: true

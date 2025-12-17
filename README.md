@@ -40,10 +40,10 @@ onlinefinder.com/
 ├── docker-compose.yaml      # Docker services configuration
 ├── start.sh                 # Launch script
 ├── README.md                # This file
-├── searxng/                 # Configuration files
+├── onlinefinder/            # Configuration files
 │   ├── settings.yml         # Main configuration
 │   └── limiter.toml         # Rate limiting configuration
-├── searxng-source/          # Rebranded source code
+├── onlinefinder-source/     # Rebranded source code
 │   └── olf/                 # OnlineFinder module (renamed from searx)
 │       ├── templates/       # HTML templates with OnlineFinder branding
 │       ├── static/          # Static files (CSS, JS, images)
@@ -59,7 +59,7 @@ onlinefinder.com/
 
 ## ⚙️ Configuration
 
-### Main Settings (`searxng/settings.yml`)
+### Main Settings (`onlinefinder/settings.yml`)
 
 | Setting | Description |
 |---------|-------------|
@@ -113,7 +113,7 @@ sudo docker-compose ps
 
 ## 📝 License
 
-This project is licensed under the AGPL-3.0 License - see the [LICENSE](searxng-source/LICENSE) file for details.
+This project is licensed under the AGPL-3.0 License - see the [LICENSE](onlinefinder-source/LICENSE) file for details.
 
 Based on [SearXNG](https://github.com/searxng/searxng) - a privacy-respecting metasearch engine.
 

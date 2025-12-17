@@ -27,13 +27,13 @@ echo ""
 # Copy logo files into the container's theme directory
 echo "📁 Copying logo files into container..."
 
-# Copy the logo as searxng.svg (this is what the theme looks for)
-sudo docker cp logos/onlinefinder-logo.svg "$CONTAINER_ID":/usr/local/searxng/searx/static/themes/simple/img/searxng.svg
-sudo docker cp logos/onlinefinder-logo.png "$CONTAINER_ID":/usr/local/searxng/searx/static/themes/simple/img/searxng.png
+# Copy the logo as onlinefinder.svg (this is what the theme looks for)
+sudo docker cp logos/onlinefinder-logo.svg "$CONTAINER_ID":/usr/local/onlinefinder/olf/static/themes/simple/img/onlinefinder.svg
+sudo docker cp logos/onlinefinder-logo.png "$CONTAINER_ID":/usr/local/onlinefinder/olf/static/themes/simple/img/onlinefinder.png
 
 # Also copy as logo files
-sudo docker cp logos/onlinefinder-logo.svg "$CONTAINER_ID":/usr/local/searxng/searx/static/themes/simple/img/logo.svg
-sudo docker cp logos/onlinefinder-logo.png "$CONTAINER_ID":/usr/local/searxng/searx/static/themes/simple/img/logo.png
+sudo docker cp logos/onlinefinder-logo.svg "$CONTAINER_ID":/usr/local/onlinefinder/olf/static/themes/simple/img/logo.svg
+sudo docker cp logos/onlinefinder-logo.png "$CONTAINER_ID":/usr/local/onlinefinder/olf/static/themes/simple/img/logo.png
 
 echo "✅ Logo files copied!"
 echo ""

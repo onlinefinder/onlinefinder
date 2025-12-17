@@ -12,7 +12,7 @@ echo "   OnlineFinder - Source Code Rebranding"
 echo "========================================== 🔄"
 echo ""
 
-cd /home/operator00/Documents/www/onlinefinder.com/searxng-source
+cd /home/operator00/Documents/www/onlinefinder.com/onlinefinder-source
 
 # Step 1: Replace text in all files
 echo "📝 Step 1: Replacing text references..."
