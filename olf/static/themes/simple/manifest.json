@@ -3,8 +3,8 @@
     "file": "chunk/13gvpunf.min.js",
     "name": "assertelement"
   },
-  "_gZqIRpW1.min.js": {
-    "file": "chunk/gZqIRpW1.min.js",
+  "_DvX-GXDU.min.js": {
+    "file": "chunk/DvX-GXDU.min.js",
     "name": "getelement",
     "imports": [
       "_13gvpunf.min.js"
@@ -21,13 +21,14 @@
       "src/js/plugin/Calculator.ts",
       "src/js/main/keyboard.ts",
       "src/js/main/search.ts",
+      "src/js/main/clock.ts",
       "src/js/main/autocomplete.ts",
       "src/js/main/results.ts",
       "src/js/main/preferences.ts"
     ]
   },
   "src/js/main/autocomplete.ts": {
-    "file": "chunk/KPZlR0ib.min.js",
+    "file": "chunk/AhF6Zcg3.min.js",
     "name": "autocomplete",
     "src": "src/js/main/autocomplete.ts",
     "isDynamicEntry": true,
@@ -36,8 +37,17 @@
       "_13gvpunf.min.js"
     ]
   },
+  "src/js/main/clock.ts": {
+    "file": "chunk/Dk1aJzx4.min.js",
+    "name": "clock",
+    "src": "src/js/main/clock.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/js/index.ts"
+    ]
+  },
   "src/js/main/keyboard.ts": {
-    "file": "chunk/Db5v-hxx.min.js",
+    "file": "chunk/B8MCJi_r.min.js",
     "name": "keyboard",
     "src": "src/js/main/keyboard.ts",
     "isDynamicEntry": true,
@@ -47,7 +57,7 @@
     ]
   },
   "src/js/main/preferences.ts": {
-    "file": "chunk/CyyZ9XJS.min.js",
+    "file": "chunk/BtmaEFMA.min.js",
     "name": "preferences",
     "src": "src/js/main/preferences.ts",
     "isDynamicEntry": true,
@@ -57,7 +67,7 @@
     ]
   },
   "src/js/main/results.ts": {
-    "file": "chunk/Q2SRo2ED.min.js",
+    "file": "chunk/DZ6yyQjG.min.js",
     "name": "results",
     "src": "src/js/main/results.ts",
     "isDynamicEntry": true,
@@ -67,38 +77,38 @@
     ]
   },
   "src/js/main/search.ts": {
-    "file": "chunk/Q2W2fJLA.min.js",
+    "file": "chunk/873ft5JK.min.js",
     "name": "search",
     "src": "src/js/main/search.ts",
     "isDynamicEntry": true,
     "imports": [
       "src/js/index.ts",
-      "_gZqIRpW1.min.js"
+      "_DvX-GXDU.min.js"
     ]
   },
   "src/js/plugin/Calculator.ts": {
-    "file": "chunk/CGazvOKw.min.js",
+    "file": "chunk/se1lYYOM.min.js",
     "name": "calculator",
     "src": "src/js/plugin/Calculator.ts",
     "isDynamicEntry": true,
     "imports": [
       "src/js/index.ts",
-      "_gZqIRpW1.min.js"
+      "_DvX-GXDU.min.js"
     ]
   },
   "src/js/plugin/InfiniteScroll.ts": {
-    "file": "chunk/DBO1tjH7.min.js",
+    "file": "chunk/CiOII1FN.min.js",
     "name": "infinitescroll",
     "src": "src/js/plugin/InfiniteScroll.ts",
     "isDynamicEntry": true,
     "imports": [
       "src/js/index.ts",
       "_13gvpunf.min.js",
-      "_gZqIRpW1.min.js"
+      "_DvX-GXDU.min.js"
     ]
   },
   "src/js/plugin/MapView.ts": {
-    "file": "chunk/BAcZkB_P.min.js",
+    "file": "chunk/D0zsZnqx.min.js",
     "name": "mapview",
     "src": "src/js/plugin/MapView.ts",
     "isDynamicEntry": true,

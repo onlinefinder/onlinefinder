@@ -2,7 +2,30 @@
 {% from 'simple/icons.html' import icon_big %}
 {% block content %}
 <div class="index">
-    <div class="title"><h1>OnlineFinder</h1></div>
+    {# Digital Clock Feature #}
+    <div id="digital-clock" 
+         class="digital-clock hide_if_nojs" 
+         data-enabled="{{ preferences.get_value('clock_enabled') and 'true' or 'false' }}"
+         data-format="{{ preferences.get_value('clock_format') or '12h' }}"
+         data-alarm-time="{{ preferences.get_value('alarm_time') or '' }}"
+         data-alarm-sound="{{ preferences.get_value('alarm_sound') or 'gentle_birds' }}"
+         data-alarm-volume="{{ preferences.get_value('alarm_volume') or 50 }}"
+         style="display: none;">
+        <div class="clock-display">
+            <span class="clock-time" id="clock-time">--:--:--</span>
+            <span class="clock-period" id="clock-period"></span>
+        </div>
+        <div class="alarm-indicator" id="alarm-indicator" style="display: none;">
+            {{ icon_big('alarm') }}
+            <span id="alarm-time-display"></span>
+        </div>
+    </div>
+    <div class="title">
+        <h1>
+            <span hidden>OnlineFinder</span>
+            {% include 'simple/onlinefinder-wordmark.min.svg' without context %}
+        </h1>
+    </div>
     {% include 'simple/simple_search.html' %}
 </div>
 {% endblock %}

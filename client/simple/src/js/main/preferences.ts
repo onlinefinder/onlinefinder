@@ -75,3 +75,104 @@ listen("click", "#copy-hash", async function (this: HTMLElement) {
     this.innerText = copiedText;
   }
 });
+
+const volumeSlider = document.getElementById("alarm_volume") as HTMLInputElement | null;
+const volumeDisplay = document.getElementById("alarm_volume_display");
+if (volumeSlider && volumeDisplay) {
+  volumeSlider.addEventListener("input", () => {
+    volumeDisplay.textContent = `${volumeSlider.value}%`;
+  });
+}
+
+const testSoundBtn = document.getElementById("test_alarm_sound");
+const alarmSoundSelect = document.getElementById("alarm_sound") as HTMLSelectElement | null;
+if (testSoundBtn && alarmSoundSelect && volumeSlider) {
+  testSoundBtn.addEventListener("click", () => {
+    const testFn = (window as Window & { testAlarmSound?: (sound: string, volume: number) => void }).testAlarmSound;
+    if (testFn) {
+      testFn(alarmSoundSelect.value, Number.parseInt(volumeSlider.value, 10));
+    }
+  });
+}
+
+const CLOCK_SETTINGS_SAVED_KEY = "clockSettingsSaved";
+const NOTIFICATION_DISPLAY_DURATION = 3000;
+const NOTIFICATION_FADE_DURATION = 300;
+
+const hasClockSettings = (): boolean => {
+  return (
+    document.getElementById("clock_enabled") !== null ||
+    document.getElementById("clock_format") !== null ||
+    document.getElementById("alarm_time") !== null ||
+    document.getElementById("alarm_sound") !== null ||
+    document.getElementById("alarm_volume") !== null
+  );
+};
+
+const showClockSavedNotification = (): void => {
+  const notification = document.createElement("div");
+  notification.className = "clock-saved-notification";
+  notification.textContent = "Clock settings saved!";
+  notification.setAttribute("role", "alert");
+  document.body.appendChild(notification);
+
+  requestAnimationFrame(() => {
+    notification.classList.add("show");
+  });
+
+  setTimeout(() => {
+    notification.classList.remove("show");
+    setTimeout(() => notification.remove(), NOTIFICATION_FADE_DURATION);
+  }, NOTIFICATION_DISPLAY_DURATION);
+};
+
+const preferencesForm = document.getElementById("search_form") as HTMLFormElement | null;
+if (preferencesForm) {
+  preferencesForm.addEventListener("submit", () => {
+    if (hasClockSettings()) {
+      sessionStorage.setItem(CLOCK_SETTINGS_SAVED_KEY, "true");
+    }
+  });
+
+  if (sessionStorage.getItem(CLOCK_SETTINGS_SAVED_KEY) === "true") {
+    sessionStorage.removeItem(CLOCK_SETTINGS_SAVED_KEY);
+    showClockSavedNotification();
+  }
+}
+
+const notificationBtn = document.getElementById("enable_notifications");
+const notificationStatus = document.getElementById("notification_status");
+if (notificationBtn && notificationStatus) {
+  const updateNotificationStatus = (): void => {
+    if (!("Notification" in window)) {
+      notificationStatus.textContent = "Not supported";
+      notificationStatus.className = "notification-status denied";
+      notificationBtn.style.display = "none";
+      return;
+    }
+    if (Notification.permission === "granted") {
+      notificationStatus.textContent = "Enabled";
+      notificationStatus.className = "notification-status granted";
+      notificationBtn.style.display = "none";
+    } else if (Notification.permission === "denied") {
+      notificationStatus.textContent = "Blocked";
+      notificationStatus.className = "notification-status denied";
+      notificationBtn.style.display = "none";
+    } else {
+      notificationStatus.textContent = "";
+      notificationBtn.style.display = "inline-block";
+    }
+  };
+
+  updateNotificationStatus();
+
+  notificationBtn.addEventListener("click", async () => {
+    const reqFn = (window as Window & { requestNotificationPermission?: () => Promise<boolean> }).requestNotificationPermission;
+    if (reqFn) {
+      await reqFn();
+    } else if ("Notification" in window) {
+      await Notification.requestPermission();
+    }
+    updateNotificationStatus();
+  });
+}

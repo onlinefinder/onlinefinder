@@ -40,6 +40,7 @@ ready(
   () => {
     void import("./main/keyboard.ts");
     void import("./main/search.ts");
+    void import("./main/clock.ts");
 
     if (settings.autocomplete) {
       void import("./main/autocomplete.ts");
@@ -64,6 +65,7 @@ ready(
 ready(
   () => {
     void import("./main/preferences.ts");
+    void import("./main/clock.ts");
   },
   { on: [endpoint === Endpoints.preferences] }
 );

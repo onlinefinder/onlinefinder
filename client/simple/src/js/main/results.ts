@@ -113,10 +113,57 @@ listen("click", ".media-loader", function (this: HTMLElement) {
   if (!srctest) {
     const dataSrc = iframeLoad.getAttribute("data-src");
     if (dataSrc) {
+      const fallback = document.querySelector<HTMLElement>(`${target} > .video-fallback`);
+      const container = iframeLoad.parentElement;
+      
+      // Show fallback by default for YouTube videos
+      if (fallback && dataSrc.includes("youtube")) {
+        // Keep fallback visible initially
+        fallback.style.display = "block";
+        iframeLoad.style.opacity = "0";
+        
+        // Listen for YouTube postMessage events to detect successful load
+        let messageReceived = false;
+        const messageListener = (event: MessageEvent): void => {
+          // YouTube sends various messages when player loads
+          // Check for messages from youtube domains
+          if (event.origin.includes("youtube") || event.origin.includes("youtube-nocookie")) {
+            // YouTube player is ready - hide fallback and show iframe
+            if (!messageReceived) {
+              messageReceived = true;
+              hideVideoFallback(iframeLoad, fallback);
+              window.removeEventListener("message", messageListener);
+            }
+          }
+        };
+        window.addEventListener("message", messageListener);
+        
+        // Fallback timeout: if no message received after 4 seconds, keep fallback visible
+        setTimeout(() => {
+          if (!messageReceived) {
+            window.removeEventListener("message", messageListener);
+            // Keep fallback visible, hide iframe
+            showVideoFallback(iframeLoad, fallback);
+          }
+        }, 4000);
+      }
+      
       iframeLoad.setAttribute("src", dataSrc);
     }
   }
 });
+
+function showVideoFallback(iframe: HTMLIFrameElement, fallback: HTMLElement): void {
+  iframe.style.display = "none";
+  iframe.style.opacity = "0";
+  fallback.style.display = "block";
+}
+
+function hideVideoFallback(iframe: HTMLIFrameElement, fallback: HTMLElement): void {
+  iframe.style.display = "block";
+  iframe.style.opacity = "1";
+  fallback.style.display = "none";
+}
 
 listen("click", "#copy_url", async function (this: HTMLElement) {
   const target = this.parentElement?.querySelector<HTMLPreElement>("pre");

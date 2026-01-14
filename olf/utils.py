@@ -625,7 +625,9 @@ def get_embeded_stream_url(url: str):
     if parsed_url.netloc in ['www.youtube.com', 'youtube.com'] and parsed_url.path == '/watch' and parsed_url.query:
         video_id = parse_qs(parsed_url.query).get('v', [])
         if video_id:
-            iframe_src = 'https://www.youtube-nocookie.com/embed/' + video_id[0]
+            # Add enablejsapi parameter to prevent Error 153
+            # Note: Some videos may still show Error 153 if embedding is disabled by the video owner
+            iframe_src = 'https://www.youtube-nocookie.com/embed/' + video_id[0] + '?enablejsapi=1'
 
     # Facebook
     elif parsed_url.netloc in ['www.facebook.com', 'facebook.com']:

@@ -36,6 +36,15 @@
          {%- if checked -%} checked{%- endif -%}>
 {%- endmacro -%}
 
+{%- macro checkbox_onoff(name, checked, labelledby) -%}
+  <input type="checkbox" {{- ' ' -}}
+         name="{{ name }}" {{- ' ' -}}
+         id="{{ name }}" {{- ' ' -}}
+         {%- if labelledby -%} aria-labelledby="{{ labelledby }}"{{- ' ' -}}{%- endif -%}
+         class="checkbox-onoff"{{- ' ' -}}
+         {%- if checked -%} checked{%- endif -%}>
+{%- endmacro -%}
+
 {%- macro plugin_preferences(section) -%}
   {%- for plugin in plugins_storage -%}
     {%- if plugin.preference_section == section -%}
@@ -251,6 +260,12 @@
     {%- if answer_storage -%}
       {%- include 'simple/preferences/answerers.html' -%}
     {%- endif -%}
+    {{- tab_footer() -}}
+
+    {# tab: features #}
+
+    {{- tab_header('maintab', 'features', _('Features')) -}}
+    {%- include 'simple/preferences/features.html' -%}
     {{- tab_footer() -}}
 
     {# tab: cookies #}

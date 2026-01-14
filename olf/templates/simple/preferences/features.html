@@ -1,0 +1,95 @@
+{# Clock Feature Settings #}
+<fieldset>
+  <legend>{{ _('Digital Clock') }}</legend>
+  <div class="value">
+    {{- checkbox_onoff('clock_enabled', preferences.get_value('clock_enabled')) -}}
+  </div>
+  <div class="description">
+    {{ _('Display a large digital clock above the search bar on the home page.') }}
+  </div>
+</fieldset>
+
+{%- if 'clock_format' not in locked_preferences -%}
+<fieldset>
+  <legend>{{ _('Time Format') }}</legend>
+  <div class="value">
+    <select name="clock_format" id="clock_format" aria-labelledby="clock_format_label">
+      <option value="12h" {% if preferences.get_value('clock_format') == '12h' %}selected{% endif %}>{{ _('12-hour (AM/PM)') }}</option>
+      <option value="24h" {% if preferences.get_value('clock_format') == '24h' %}selected{% endif %}>{{ _('24-hour') }}</option>
+    </select>
+  </div>
+  <div class="description" id="clock_format_label">
+    {{ _('Choose between 12-hour (with AM/PM) or 24-hour time format.') }}
+  </div>
+</fieldset>
+{%- endif -%}
+
+<div class="pref-group">{{ _('Alarm Settings') }}</div>
+
+{%- if 'alarm_time' not in locked_preferences -%}
+<fieldset>
+  <legend>{{ _('Alarm Time') }}</legend>
+  <div class="value">
+    <input type="time" name="alarm_time" id="alarm_time" value="{{ preferences.get_value('alarm_time') or '' }}">
+  </div>
+  <div class="description">
+    {{ _('Set an alarm time. Leave empty to disable the alarm. Note: Alarm will only trigger when this browser tab is open.') }}
+  </div>
+</fieldset>
+{%- endif -%}
+
+{%- if 'alarm_sound' not in locked_preferences -%}
+<fieldset>
+  <legend>{{ _('Alarm Sound') }}</legend>
+  <div class="value">
+    <select name="alarm_sound" id="alarm_sound" aria-labelledby="alarm_sound_label">
+      <optgroup label="{{ _('Peaceful') }}">
+        <option value="gentle_birds" {% if preferences.get_value('alarm_sound') == 'gentle_birds' %}selected{% endif %}>{{ _('Gentle Birds') }}</option>
+        <option value="ocean_waves" {% if preferences.get_value('alarm_sound') == 'ocean_waves' %}selected{% endif %}>{{ _('Ocean Waves') }}</option>
+        <option value="soft_chimes" {% if preferences.get_value('alarm_sound') == 'soft_chimes' %}selected{% endif %}>{{ _('Soft Chimes') }}</option>
+        <option value="morning_forest" {% if preferences.get_value('alarm_sound') == 'morning_forest' %}selected{% endif %}>{{ _('Morning Forest') }}</option>
+      </optgroup>
+      <optgroup label="{{ _('Moderate') }}">
+        <option value="meditation_bell" {% if preferences.get_value('alarm_sound') == 'meditation_bell' %}selected{% endif %}>{{ _('Meditation Bell') }}</option>
+        <option value="gentle_piano" {% if preferences.get_value('alarm_sound') == 'gentle_piano' %}selected{% endif %}>{{ _('Gentle Piano') }}</option>
+        <option value="classic_alarm" {% if preferences.get_value('alarm_sound') == 'classic_alarm' %}selected{% endif %}>{{ _('Classic Alarm') }}</option>
+        <option value="digital_beep" {% if preferences.get_value('alarm_sound') == 'digital_beep' %}selected{% endif %}>{{ _('Digital Beep') }}</option>
+      </optgroup>
+      <optgroup label="{{ _('Abrupt') }}">
+        <option value="urgent_buzzer" {% if preferences.get_value('alarm_sound') == 'urgent_buzzer' %}selected{% endif %}>{{ _('Urgent Buzzer') }}</option>
+        <option value="retro_alarm" {% if preferences.get_value('alarm_sound') == 'retro_alarm' %}selected{% endif %}>{{ _('Retro Alarm Clock') }}</option>
+        <option value="starship_alert" {% if preferences.get_value('alarm_sound') == 'starship_alert' %}selected{% endif %}>{{ _('Starship Alert') }}</option>
+        <option value="red_alert" {% if preferences.get_value('alarm_sound') == 'red_alert' %}selected{% endif %}>{{ _('Red Alert') }}</option>
+      </optgroup>
+    </select>
+    <button type="button" id="test_alarm_sound" class="btn-test-sound">{{ _('Test') }}</button>
+  </div>
+  <div class="description" id="alarm_sound_label">
+    {{ _('Choose your alarm sound. Sounds range from peaceful (birds, ocean) to abrupt (buzzer, alerts).') }}
+  </div>
+</fieldset>
+{%- endif -%}
+
+{%- if 'alarm_volume' not in locked_preferences -%}
+<fieldset>
+  <legend>{{ _('Alarm Volume') }}</legend>
+  <div class="value volume-control">
+    <input type="range" name="alarm_volume" id="alarm_volume" min="0" max="100" step="10" value="{{ preferences.get_value('alarm_volume') or 50 }}">
+    <span id="alarm_volume_display">{{ preferences.get_value('alarm_volume') or 50 }}%</span>
+  </div>
+  <div class="description">
+    {{ _('Adjust the alarm volume level.') }}
+  </div>
+</fieldset>
+{%- endif -%}
+
+<fieldset>
+  <legend>{{ _('Browser Notifications') }}</legend>
+  <div class="value">
+    <button type="button" id="enable_notifications" class="btn-notifications">{{ _('Enable Notifications') }}</button>
+    <span id="notification_status" class="notification-status"></span>
+  </div>
+  <div class="description">
+    {{ _('Allow browser notifications for alarms. This enables visual alerts even when the tab is not in focus.') }}
+  </div>
+</fieldset>

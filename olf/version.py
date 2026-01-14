@@ -9,9 +9,9 @@ import subprocess
 
 # fallback values
 # if there is olf.version_frozen module, and it is not possible to get the git tag
-VERSION_STRING: str = "1.0.0"
-VERSION_TAG: str = "1.0.0"
-DOCKER_TAG: str = "1.0.0"
+VERSION_STRING: str = "1.1.0"
+VERSION_TAG: str = "1.1.0"
+DOCKER_TAG: str = "1.1.0"
 GIT_URL: str = "unknown"
 GIT_BRANCH: str = "unknown"
 
@@ -66,10 +66,12 @@ def get_git_url_and_branch():
 
 
 def get_git_version() -> tuple[str, str, str]:
-    git_commit_date_hash: str = subprocess_run(r"git show -s --date='format:%Y.%m.%d' --format='%cd+%h'")
+    git_commit_date_hash: str = subprocess_run(
+        r"git show -s --date='format:%Y.%m.%d' --format='%cd+%h'"
+    )
     # Remove leading zero from minor and patch level / replacement of PR-2122
     # which depended on the git version: '2023.05.06+..' --> '2023.5.6+..'
-    git_commit_date_hash = git_commit_date_hash.replace('.0', '.')
+    git_commit_date_hash = git_commit_date_hash.replace(".0", ".")
     tag_version: str = git_commit_date_hash
     git_version: str = git_commit_date_hash
     docker_tag: str = git_commit_date_hash.replace("+", "-")
@@ -81,7 +83,9 @@ def get_git_version() -> tuple[str, str, str]:
         if e.returncode == 1:
             git_version += "+dirty"
         else:
-            logger.warning('"%s" returns an unexpected return code %i', e.returncode, e.cmd)
+            logger.warning(
+                '"%s" returns an unexpected return code %i', e.returncode, e.cmd
+            )
 
     return git_version, tag_version, docker_tag
 
@@ -106,7 +110,7 @@ def get_information() -> tuple[str, str, str, str, str]:
 
 
 try:
-    vf = importlib.import_module('olf.version_frozen')
+    vf = importlib.import_module("olf.version_frozen")
     VERSION_STRING, VERSION_TAG, DOCKER_TAG, GIT_URL, GIT_BRANCH = (
         str(vf.VERSION_STRING),
         str(vf.VERSION_TAG),
