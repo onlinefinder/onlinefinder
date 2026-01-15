@@ -65,19 +65,9 @@
   </main>
   <footer>
     <p>
-    {{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">OnlineFinder</a> — {{ _('a privacy-respecting, open metasearch engine') }}<br>
-        <a href="https://github.com/onlinefinder/onlinefinder">{{ _('Source code') }}</a>
-        | <a href="{{ get_setting('brand.issue_url') }}">{{ _('Issue tracker') }}</a>
-        {% if enable_metrics %}| <a href="{{ url_for('stats') }}">{{ _('Engine stats') }}</a>{% endif %}
-        {% if get_setting('general.privacypolicy_url') %}
-        | <a href="{{ get_setting('general.privacypolicy_url') }}">{{ _('Privacy policy') }}</a>
-        {% endif %}
-        {% if get_setting('general.contact_url') %}
-        | <a href="{{ get_setting('general.contact_url') }}">{{ _('Contact instance maintainer') }}</a>
-        {% endif %}
-        {% for title, link in get_setting('brand.custom.links').items() %}
-        | <a href="{{ link }}">{{ _(title) }}</a>
-        {% endfor %}
+      <a href="https://onlinefinder.com">OnlineFinder.com</a> &copy; 2025, All rights reserved.<br>
+      {% if enable_metrics %}<a href="{{ url_for('stats') }}">{{ _('Engine Stats') }}</a><br>{% endif %}
+      Powered by <a href="https://stratusanvil.com">StratusAnvil.com</a>
     </p>
   </footer>
 </body>
