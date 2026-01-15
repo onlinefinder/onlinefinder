@@ -38,7 +38,7 @@
     ]
   },
   "src/js/main/clock.ts": {
-    "file": "chunk/5FPl9VS2.min.js",
+    "file": "chunk/G2Ci5kOu.min.js",
     "name": "clock",
     "src": "src/js/main/clock.ts",
     "isDynamicEntry": true,
@@ -57,7 +57,7 @@
     ]
   },
   "src/js/main/preferences.ts": {
-    "file": "chunk/BxmwCegm.min.js",
+    "file": "chunk/BQFGOfkz.min.js",
     "name": "preferences",
     "src": "src/js/main/preferences.ts",
     "isDynamicEntry": true,

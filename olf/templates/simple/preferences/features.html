@@ -26,6 +26,18 @@
 
 <div class="pref-group">{{ _('Alarm Settings') }}</div>
 
+{%- if 'alarm_enabled' not in locked_preferences -%}
+<fieldset>
+  <legend>{{ _('Alarm On/Off') }}</legend>
+  <div class="value">
+    {{- checkbox_onoff('alarm_enabled', preferences.get_value('alarm_enabled')) -}}
+  </div>
+  <div class="description">
+    {{ _('Enable or disable the alarm. When enabled, the alarm will sound at the set time.') }}
+  </div>
+</fieldset>
+{%- endif -%}
+
 {%- if 'alarm_time' not in locked_preferences -%}
 <fieldset>
   <legend>{{ _('Alarm Time') }}</legend>

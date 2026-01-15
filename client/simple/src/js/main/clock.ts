@@ -419,6 +419,17 @@ const checkAlarm = (alarmTime: { hours: number; minutes: number }, lastTriggered
   return currentHours === alarmTime.hours && currentMinutes === alarmTime.minutes;
 };
 
+const ALARM_TOGGLE_KEY = "onlinefinder_alarm_enabled";
+
+const getAlarmToggleState = (preferenceEnabled: boolean): boolean => {
+  const stored = localStorage.getItem(ALARM_TOGGLE_KEY);
+  return stored === null ? preferenceEnabled : stored === "true";
+};
+
+const setAlarmToggleState = (enabled: boolean): void => {
+  localStorage.setItem(ALARM_TOGGLE_KEY, String(enabled));
+};
+
 // Initialize clock
 const initClock = (): void => {
   const clockElement = document.getElementById("digital-clock");
@@ -431,6 +442,7 @@ const initClock = (): void => {
   clockElement.style.display = "block";
 
   const format = clockElement.dataset.format || "12h";
+  const alarmEnabledPref = clockElement.dataset.alarmEnabled === "true";
   const alarmTimeStr = clockElement.dataset.alarmTime || "";
   const alarmSound = clockElement.dataset.alarmSound || "gentle_birds";
   const alarmVolume = Number.parseInt(clockElement.dataset.alarmVolume || "50", 10);
@@ -439,20 +451,59 @@ const initClock = (): void => {
   const clockPeriodEl = document.getElementById("clock-period");
   const alarmIndicatorEl = document.getElementById("alarm-indicator");
   const alarmTimeDisplayEl = document.getElementById("alarm-time-display");
+  const alarmToggleEl = document.getElementById("alarm-toggle");
 
   const alarmTime = parseAlarmTime(alarmTimeStr);
 
-  // Show alarm indicator if alarm is set
-  if (alarmTime && alarmIndicatorEl && alarmTimeDisplayEl) {
-    alarmIndicatorEl.style.display = "inline-flex";
-    let displayTime = alarmTimeStr;
+  let alarmEnabled = getAlarmToggleState(alarmEnabledPref);
+
+  const getFormattedAlarmTime = (): string => {
+    if (!alarmTime) return "";
     if (format === "12h") {
       const h = alarmTime.hours % 12 || 12;
       const p = alarmTime.hours >= 12 ? "PM" : "AM";
-      displayTime = `${h}:${alarmTime.minutes.toString().padStart(2, "0")} ${p}`;
+      return `${h}:${alarmTime.minutes.toString().padStart(2, "0")} ${p}`;
     }
-    alarmTimeDisplayEl.textContent = displayTime;
+    return alarmTimeStr;
+  };
+
+  const updateAlarmIndicator = (): void => {
+    if (!alarmToggleEl || !alarmIndicatorEl || !alarmTimeDisplayEl) return;
+
+    if (!alarmEnabledPref) {
+      alarmToggleEl.style.display = "none";
+      alarmIndicatorEl.style.display = "none";
+      return;
+    }
+
+    alarmToggleEl.style.display = "inline-flex";
+
+    if (alarmEnabled) {
+      alarmToggleEl.classList.add("alarm-on");
+      alarmToggleEl.classList.remove("alarm-off");
+      if (alarmTime) {
+        alarmIndicatorEl.style.display = "inline-flex";
+        alarmTimeDisplayEl.textContent = getFormattedAlarmTime();
+      } else {
+        alarmIndicatorEl.style.display = "inline-flex";
+        alarmTimeDisplayEl.textContent = "No time set";
+      }
+    } else {
+      alarmToggleEl.classList.remove("alarm-on");
+      alarmToggleEl.classList.add("alarm-off");
+      alarmIndicatorEl.style.display = "none";
+    }
+  };
+
+  if (alarmToggleEl) {
+    alarmToggleEl.addEventListener("click", () => {
+      alarmEnabled = !alarmEnabled;
+      setAlarmToggleState(alarmEnabled);
+      updateAlarmIndicator();
+    });
   }
+
+  updateAlarmIndicator();
 
   let lastTriggered: string | null = null;
   let alarmActive = false;
@@ -465,22 +516,14 @@ const initClock = (): void => {
     if (clockTimeEl) clockTimeEl.textContent = time;
     if (clockPeriodEl) clockPeriodEl.textContent = period;
 
-    // Check alarm
-    if (alarmTime && !alarmActive && checkAlarm(alarmTime, lastTriggered)) {
+    if (alarmTime && alarmEnabled && !alarmActive && checkAlarm(alarmTime, lastTriggered)) {
       const currentKey = `${now.getHours()}:${now.getMinutes()}`;
       lastTriggered = currentKey;
       alarmActive = true;
 
-      // Play alarm
       playAlarmWithRepeat(alarmSound, alarmVolume);
-
-      // Show notification
       showNotification("Alarm", "Your alarm is ringing!");
-
-      // Add visual indicator
       clockElement.classList.add("alarm-ringing");
-
-      // Stop alarm after 60 seconds or on click
       const stopAlarmHandler = (): void => {
         stopAlarm();
         alarmActive = false;
@@ -489,7 +532,6 @@ const initClock = (): void => {
       };
 
       clockElement.addEventListener("click", stopAlarmHandler);
-      setTimeout(stopAlarmHandler, 60_000);
     }
   };
 
@@ -501,7 +543,8 @@ const initClock = (): void => {
 };
 
 // Export for preferences page testing
-(window as Window & { testAlarmSound?: typeof playAlarmSound }).testAlarmSound = playAlarmSound;
+(window as Window & { testAlarmSound?: typeof playAlarmWithRepeat }).testAlarmSound = playAlarmWithRepeat;
+(window as Window & { stopAlarmSound?: typeof stopAlarm }).stopAlarmSound = stopAlarm;
 (window as Window & { requestNotificationPermission?: typeof requestNotificationPermission }).requestNotificationPermission =
   requestNotificationPermission;
 

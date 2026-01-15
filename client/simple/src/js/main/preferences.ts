@@ -84,13 +84,26 @@ if (volumeSlider && volumeDisplay) {
   });
 }
 
-const testSoundBtn = document.getElementById("test_alarm_sound");
+const testSoundBtn = document.getElementById("test_alarm_sound") as HTMLButtonElement | null;
 const alarmSoundSelect = document.getElementById("alarm_sound") as HTMLSelectElement | null;
 if (testSoundBtn && alarmSoundSelect && volumeSlider) {
+  let isPlaying = false;
+  const originalText = testSoundBtn.textContent || "Test";
+
   testSoundBtn.addEventListener("click", () => {
     const testFn = (window as Window & { testAlarmSound?: (sound: string, volume: number) => void }).testAlarmSound;
-    if (testFn) {
-      testFn(alarmSoundSelect.value, Number.parseInt(volumeSlider.value, 10));
+    const stopFn = (window as Window & { stopAlarmSound?: () => void }).stopAlarmSound;
+
+    if (isPlaying) {
+      if (stopFn) stopFn();
+      testSoundBtn.textContent = originalText;
+      isPlaying = false;
+    } else {
+      if (testFn) {
+        testFn(alarmSoundSelect.value, Number.parseInt(volumeSlider.value, 10));
+        testSoundBtn.textContent = "Stop";
+        isPlaying = true;
+      }
     }
   });
 }

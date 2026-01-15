@@ -7,6 +7,7 @@
          class="digital-clock hide_if_nojs" 
          data-enabled="{{ preferences.get_value('clock_enabled') and 'true' or 'false' }}"
          data-format="{{ preferences.get_value('clock_format') or '12h' }}"
+         data-alarm-enabled="{{ preferences.get_value('alarm_enabled') and 'true' or 'false' }}"
          data-alarm-time="{{ preferences.get_value('alarm_time') or '' }}"
          data-alarm-sound="{{ preferences.get_value('alarm_sound') or 'gentle_birds' }}"
          data-alarm-volume="{{ preferences.get_value('alarm_volume') or 50 }}"

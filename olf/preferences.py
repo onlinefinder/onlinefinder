@@ -513,6 +513,9 @@ class Preferences:
                 locked=is_locked("clock_format"),
                 choices=["12h", "24h"],
             ),
+            "alarm_enabled": BooleanSetting(
+                settings["ui"]["alarm_enabled"], locked=is_locked("alarm_enabled")
+            ),
             "alarm_time": StringSetting(
                 settings["ui"]["alarm_time"], locked=is_locked("alarm_time")
             ),

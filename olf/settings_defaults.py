@@ -263,6 +263,7 @@ SCHEMA: dict[str, t.Any] = {
         # Clock feature settings
         "clock_enabled": SettingsValue(bool, False),
         "clock_format": SettingsValue(("12h", "24h"), "12h"),
+        "alarm_enabled": SettingsValue(bool, False),
         "alarm_time": SettingsValue(str, ""),
         "alarm_sound": SettingsValue(str, "gentle_birds"),
         "alarm_volume": SettingsValue(int, 50),

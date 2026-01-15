@@ -1,5 +1,34 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+// 7-segment digital clock font (DSEG7 Classic Bold)
+@font-face {
+  font-family: "DSEG7-Classic";
+  src: url("https://cdn.jsdelivr.net/npm/dseg@0.46.0/fonts/DSEG7-Classic/DSEG7Classic-Bold.woff2") format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/dseg@0.46.0/fonts/DSEG7-Classic/DSEG7Classic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DSEG7-Classic";
+  src: url("https://cdn.jsdelivr.net/npm/dseg@0.46.0/fonts/DSEG7-Classic/DSEG7Classic-Regular.woff2") format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/dseg@0.46.0/fonts/DSEG7-Classic/DSEG7Classic-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 14-segment font for letters (date display)
+@font-face {
+  font-family: "DSEG14-Classic";
+  src: url("https://cdn.jsdelivr.net/npm/dseg@0.46.0/fonts/DSEG14-Classic/DSEG14Classic-Bold.woff2") format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/dseg@0.46.0/fonts/DSEG14-Classic/DSEG14Classic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 .digital-clock {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -13,21 +42,58 @@
   }
 
   .clock-time {
-    font-size: 96pt;
-    font-weight: 300;
-    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 72pt;
+    font-weight: bold;
+    font-family: "DSEG7-Classic", monospace;
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.05em;
     line-height: 1;
     color: var(--color-base-font);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .clock-period {
     font-size: 24pt;
-    font-weight: 400;
+    font-weight: bold;
+    font-family: "DSEG7-Classic", monospace;
+    color: var(--color-base-font);
+    letter-spacing: 0.05em;
+  }
+
+  .alarm-toggle {
+    display: none;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+    background: var(--color-settings-table-group-background);
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
     color: var(--color-base-font-light);
-    letter-spacing: 0.1em;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+    }
+
+    &:hover {
+      background: var(--color-btn-background);
+      color: var(--color-btn-font);
+    }
+
+    &.alarm-on {
+      background: var(--color-btn-background);
+      color: var(--color-btn-font);
+      border-color: var(--color-btn-background);
+    }
+
+    &.alarm-off {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .alarm-indicator {
@@ -96,11 +162,11 @@
 @media screen and (max-width: @phone) {
   .digital-clock {
     .clock-time {
-      font-size: 48pt;
+      font-size: 36pt;
     }
 
     .clock-period {
-      font-size: 16pt;
+      font-size: 14pt;
     }
 
     .alarm-indicator {
@@ -118,11 +184,11 @@
 @media screen and (max-width: @tablet) and (min-width: @phone) {
   .digital-clock {
     .clock-time {
-      font-size: 72pt;
+      font-size: 54pt;
     }
 
     .clock-period {
-      font-size: 20pt;
+      font-size: 18pt;
     }
   }
 }
